@@ -1,0 +1,4117 @@
+﻿<process name="SAP 740 - Basic SAP Table Actions" version="1.0" bpversion="5.0.30.0" narrative="Set of universal actions to work with SAP Tables" type="object" runmode="Background" preferredid="3d92cc52-1853-47b3-b8d8-11b718e60f43">
+  <appdef>
+    <element name="SAP">
+      <id>f4f7ac8d-9418-4f0a-8891-1c594fb9203b</id>
+      <element name="Window - Dynamic">
+        <id>e950628b-77a2-4515-ac75-09cdb7229cea</id>
+        <element name="Table - Dynamic">
+          <id>f0935b3d-77f0-4704-a4e2-cdeac456fdef</id>
+          <element name="Cell - Dynamic">
+            <id>f228761f-1cbe-4a1d-ac64-ca0691c377b1</id>
+            <type>SAPTextBox</type>
+            <basetype>SAPTextBox</basetype>
+            <datatype>text</datatype>
+            <diagnose>False</diagnose>
+            <attributes>
+              <attribute name="ID" comparisontype="dynamic" inuse="True">
+                <ProcessValue datatype="text" value="" />
+              </attribute>
+              <attribute name="ComponentType">
+                <ProcessValue datatype="text" value="GuiCTextField" />
+              </attribute>
+            </attributes>
+          </element>
+          <type>SAPTable</type>
+          <basetype>SAPTable</basetype>
+          <datatype>text</datatype>
+          <diagnose>False</diagnose>
+          <attributes>
+            <attribute name="ID" comparisontype="dynamic" inuse="True">
+              <ProcessValue datatype="text" value="" />
+            </attribute>
+            <attribute name="ComponentType">
+              <ProcessValue datatype="text" value="GuiTableControl" />
+            </attribute>
+          </attributes>
+        </element>
+        <type>Window</type>
+        <basetype>Window</basetype>
+        <datatype>text</datatype>
+        <diagnose>False</diagnose>
+        <attributes>
+          <attribute name="WindowText" comparisontype="dynamic" inuse="True">
+            <ProcessValue datatype="text" value="Change NP*" />
+          </attribute>
+          <attribute name="ClassName" inuse="True">
+            <ProcessValue datatype="text" value="SAP_FRONTEND_SESSION" />
+          </attribute>
+          <attribute name="CtrlID">
+            <ProcessValue datatype="number" value="-1063369360" />
+          </attribute>
+          <attribute name="X">
+            <ProcessValue datatype="number" value="4" />
+          </attribute>
+          <attribute name="Y">
+            <ProcessValue datatype="number" value="151" />
+          </attribute>
+          <attribute name="Width">
+            <ProcessValue datatype="number" value="1359" />
+          </attribute>
+          <attribute name="Height">
+            <ProcessValue datatype="number" value="745" />
+          </attribute>
+          <attribute name="Visible">
+            <ProcessValue datatype="flag" value="True" />
+          </attribute>
+          <attribute name="ScreenVisible">
+            <ProcessValue datatype="flag" value="True" />
+          </attribute>
+          <attribute name="Enabled">
+            <ProcessValue datatype="flag" value="True" />
+          </attribute>
+          <attribute name="Active">
+            <ProcessValue datatype="flag" value="False" />
+          </attribute>
+          <attribute name="Ordinal">
+            <ProcessValue datatype="number" value="13" />
+          </attribute>
+          <attribute name="ChildCount">
+            <ProcessValue datatype="number" value="12" />
+          </attribute>
+          <attribute name="AncestorsText">
+            <ProcessValue datatype="text" value="&lt;UNKNOWN&gt; " />
+          </attribute>
+          <attribute name="AncestorCount">
+            <ProcessValue datatype="number" value="1" />
+          </attribute>
+          <attribute name="TypeName">
+            <ProcessValue datatype="text" value="SAP_FRONTEND_SESSION" />
+          </attribute>
+          <attribute name="ScreenBounds">
+            <ProcessValue datatype="text" value="RECT:25,187,895,1341" />
+          </attribute>
+          <attribute name="MatchIndex">
+            <ProcessValue datatype="number" value="1" />
+          </attribute>
+          <attribute name="MatchReverse">
+            <ProcessValue datatype="flag" value="True" />
+          </attribute>
+        </attributes>
+      </element>
+      <type>Application</type>
+      <basetype>Application</basetype>
+      <datatype>unknown</datatype>
+      <diagnose>False</diagnose>
+    </element>
+    <apptypeinfo>
+      <id>Win32Attach</id>
+      <parameters>
+        <parameter>
+          <name>WindowTitle</name>
+          <value>
+          </value>
+        </parameter>
+        <parameter>
+          <name>ProcessName</name>
+          <value>
+          </value>
+        </parameter>
+        <parameter>
+          <name>Path</name>
+          <value>C:\Program Files (x86)\SAP\FrontEnd\SAPgui\saplogon.exe</value>
+        </parameter>
+        <parameter>
+          <name>CommandLineParams</name>
+          <value>
+          </value>
+        </parameter>
+        <parameter>
+          <name>NonInvasive</name>
+          <value>True</value>
+        </parameter>
+        <parameter>
+          <name>ProcessMode</name>
+          <value>Internal</value>
+        </parameter>
+        <parameter>
+          <name>ExternalProcessTimeout</name>
+          <value>0</value>
+        </parameter>
+      </parameters>
+    </apptypeinfo>
+  </appdef>
+  <view>
+    <camerax>-162</camerax>
+    <cameray>-1</cameray>
+    <zoom version="2">1.25</zoom>
+  </view>
+  <preconditions />
+  <endpoint narrative="" />
+  <subsheet subsheetid="ce99b2be-1982-4aa1-bc0b-c47e17922798" type="CleanUp" published="True">
+    <name>Clean Up</name>
+    <view>
+      <camerax>0</camerax>
+      <cameray>0</cameray>
+      <zoom version="2">1.25</zoom>
+    </view>
+  </subsheet>
+  <subsheet subsheetid="97074fb6-0126-47cf-afd4-4431b0c1af25" type="Normal" published="True">
+    <name>Get Cell Value</name>
+    <view>
+      <camerax>-37</camerax>
+      <cameray>130</cameray>
+      <zoom version="2">1.25</zoom>
+    </view>
+  </subsheet>
+  <subsheet subsheetid="fc352cb3-c8ef-4d37-aa24-e8b1361a5cc5" type="Normal" published="True">
+    <name>Get Cell Value (script)</name>
+    <view>
+      <camerax>-37</camerax>
+      <cameray>46</cameray>
+      <zoom version="2">1.25</zoom>
+    </view>
+  </subsheet>
+  <subsheet subsheetid="a5d50418-42b5-446e-a838-a8fcfeb59117" type="Normal" published="True">
+    <name>Choose Cell</name>
+    <view>
+      <camerax>0</camerax>
+      <cameray>27</cameray>
+      <zoom version="2">1.25</zoom>
+    </view>
+  </subsheet>
+  <subsheet subsheetid="68526aea-29c1-4d9b-8733-3e362ae07739" type="Normal" published="True">
+    <name>Set Cell Value</name>
+    <view>
+      <camerax>-37</camerax>
+      <cameray>150</cameray>
+      <zoom version="2">1.25</zoom>
+    </view>
+  </subsheet>
+  <subsheet subsheetid="51697230-ac37-4daa-9c83-64630113cddd" type="Normal" published="True">
+    <name>Set Cell Value (script)</name>
+    <view>
+      <camerax>101</camerax>
+      <cameray>-15</cameray>
+      <zoom version="2">1.25</zoom>
+    </view>
+  </subsheet>
+  <subsheet subsheetid="336788eb-b8dd-4fde-b53e-ac7cae1a0b3b" type="Normal" published="True">
+    <name>Get Column Index</name>
+    <view>
+      <camerax>101</camerax>
+      <cameray>-34</cameray>
+      <zoom version="2">1.25</zoom>
+    </view>
+  </subsheet>
+  <subsheet subsheetid="71e5e501-5868-4e7e-830d-1aefe3709b3d" type="Normal" published="True">
+    <name>Send Event to Cell</name>
+    <view>
+      <camerax>-37</camerax>
+      <cameray>-144</cameray>
+      <zoom version="2">1.25</zoom>
+    </view>
+  </subsheet>
+  <subsheet subsheetid="172a005a-0166-470f-ba0d-6aa1768aa673" type="Normal" published="True">
+    <name>Go to Record</name>
+    <view>
+      <camerax>27</camerax>
+      <cameray>-42</cameray>
+      <zoom version="2">1.25</zoom>
+    </view>
+  </subsheet>
+  <subsheet subsheetid="2909cd06-db30-453d-9d9c-e8ddd2f09a7a" type="Normal" published="True">
+    <name>Select Row</name>
+    <view>
+      <camerax>123</camerax>
+      <cameray>-42</cameray>
+      <zoom version="2">1.25</zoom>
+    </view>
+  </subsheet>
+  <subsheet subsheetid="1fc8af64-04f0-44ba-b26e-6728406be434" type="Normal" published="True">
+    <name>Unselect Row</name>
+    <view>
+      <camerax>123</camerax>
+      <cameray>-42</cameray>
+      <zoom version="2">1.25</zoom>
+    </view>
+  </subsheet>
+  <subsheet subsheetid="01cea745-f47f-4561-9abd-04871a8d98c6" type="Normal" published="True">
+    <name>Unselect All Rows</name>
+    <view>
+      <camerax>27</camerax>
+      <cameray>-42</cameray>
+      <zoom version="2">1.25</zoom>
+    </view>
+  </subsheet>
+  <subsheet subsheetid="82847b7b-cfc2-41fd-b49d-7c3dcf63c6b6" type="Normal" published="True">
+    <name>Attach</name>
+    <view>
+      <camerax>0</camerax>
+      <cameray>0</cameray>
+      <zoom version="2">1.25</zoom>
+    </view>
+  </subsheet>
+  <stage stageid="fb8df420-ca25-4d83-903e-23441416f06d" name="Start" type="Start">
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>-105</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>6c90829f-a026-47ed-9216-5a2513246973</onsuccess>
+  </stage>
+  <stage stageid="6c90829f-a026-47ed-9216-5a2513246973" name="End" type="End">
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>90</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+  </stage>
+  <stage stageid="ff314ac4-8484-49ae-9486-b6186d6ac019" name="Stage1" type="ProcessInfo">
+    <narrative>
+    </narrative>
+    <displayx>-195</displayx>
+    <displayy>-105</displayy>
+    <displaywidth>150</displaywidth>
+    <displayheight>90</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <references>
+      <reference>System.Data.dll</reference>
+      <reference>System.Xml.dll</reference>
+      <reference>System.Drawing.dll</reference>
+    </references>
+    <imports>
+      <import>System</import>
+      <import>System.Drawing</import>
+      <import>Microsoft.VisualBasic</import>
+    </imports>
+    <language>visualbasic</language>
+    <globalcode><![CDATA[]]></globalcode>
+    <code><![CDATA[]]></code>
+  </stage>
+  <stage stageid="3334f64c-c68d-4cc7-a1ae-7b3e8d6f9953" name="Clean Up" type="SubSheetInfo">
+    <subsheetid>ce99b2be-1982-4aa1-bc0b-c47e17922798</subsheetid>
+    <narrative>
+    </narrative>
+    <displayx>-195</displayx>
+    <displayy>-105</displayy>
+    <displaywidth>150</displaywidth>
+    <displayheight>90</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+  </stage>
+  <stage stageid="7b28dd08-dfc8-42fa-93ab-1d9b34f1cae5" name="Start" type="Start">
+    <subsheetid>ce99b2be-1982-4aa1-bc0b-c47e17922798</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>-105</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>664bbe2a-b01c-4afc-b247-6046ffd27d16</onsuccess>
+  </stage>
+  <stage stageid="664bbe2a-b01c-4afc-b247-6046ffd27d16" name="End" type="End">
+    <subsheetid>ce99b2be-1982-4aa1-bc0b-c47e17922798</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>90</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+  </stage>
+  <stage stageid="bae7dcdc-1821-43be-9482-6e66b703ac42" name="Note1" type="Note">
+    <subsheetid>ce99b2be-1982-4aa1-bc0b-c47e17922798</subsheetid>
+    <narrative>Clean Up Page
+
+This is an optional page where you might choose to perform some finalisation (or "cleanup") tasks as your business object is closed down.
+
+The cleanup action will be called automatically immediately after closing your business object at the end of a business process.
+
+You will not be able to call this action from a business process, nor will it be called at any other time than before the disposal of the business object.</narrative>
+    <displayx>-180</displayx>
+    <displayy>60</displayy>
+    <displaywidth>180</displaywidth>
+    <displayheight>230</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+  </stage>
+  <stage stageid="ed40e082-01f6-482d-b628-c7db1ae18276" name="Note2" type="Note">
+    <narrative>Initialise Page
+
+This is an optional page where you might choose to perform some initialisation tasks after your business object is loaded.
+
+The initialise action will be called automatically immediately after loading your business object.
+
+You will not be able to call this action from a business process, nor will it be called at any other time than after the creation of the object.</narrative>
+    <displayx>-180</displayx>
+    <displayy>60</displayy>
+    <displaywidth>180</displaywidth>
+    <displayheight>230</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+  </stage>
+  <stage stageid="8e5a6676-9f09-473d-801a-020040304afa" name="M" type="Data">
+    <loginhibit />
+    <narrative>Normal (Medium) = 1</narrative>
+    <displayx>120</displayx>
+    <displayy>-45</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>number</datatype>
+    <initialvalue>1</initialvalue>
+    <alwaysinit />
+  </stage>
+  <stage stageid="4a2fbc7e-c8f5-4214-9f51-15887c0aec9c" name="S" type="Data">
+    <loginhibit />
+    <narrative>Small 0.5</narrative>
+    <displayx>120</displayx>
+    <displayy>-90</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>number</datatype>
+    <initialvalue>0.5</initialvalue>
+    <alwaysinit />
+  </stage>
+  <stage stageid="d2347202-75f9-4a75-be9e-352478d319fd" name="L" type="Data">
+    <loginhibit />
+    <narrative>Large = 2</narrative>
+    <displayx>120</displayx>
+    <displayy>0</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>number</datatype>
+    <initialvalue>2</initialvalue>
+    <alwaysinit />
+  </stage>
+  <stage stageid="03ca9241-3a9c-47c0-94ff-39dd1bb543a7" name="XL" type="Data">
+    <loginhibit />
+    <narrative>X Large = 5</narrative>
+    <displayx>120</displayx>
+    <displayy>45</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>number</datatype>
+    <initialvalue>5</initialvalue>
+    <alwaysinit />
+  </stage>
+  <stage stageid="03dffbb2-a422-44ee-854c-57ddf5975099" name="Global Numbers" type="Block">
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>75</displayx>
+    <displayy>-165</displayy>
+    <displaywidth>90</displaywidth>
+    <displayheight>285</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="7FB2E5" />
+  </stage>
+  <stage stageid="73a9c2bf-69c6-4193-8347-63866931487b" name="XXL" type="Data">
+    <loginhibit />
+    <narrative>XX Large = 10</narrative>
+    <displayx>120</displayx>
+    <displayy>90</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>number</datatype>
+    <initialvalue>10</initialvalue>
+    <alwaysinit />
+  </stage>
+  <stage stageid="331a7ec1-7298-4ddf-b9ff-fa69b31b5012" name="Attach" type="SubSheetInfo">
+    <subsheetid>82847b7b-cfc2-41fd-b49d-7c3dcf63c6b6</subsheetid>
+    <narrative>Internal action to attach application</narrative>
+    <displayx>-120</displayx>
+    <displayy>-120</displayy>
+    <displaywidth>150</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+  </stage>
+  <stage stageid="a9ce69ba-5fb5-40ab-bae2-25f41c33766c" name="Start" type="Start">
+    <subsheetid>82847b7b-cfc2-41fd-b49d-7c3dcf63c6b6</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>-120</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <inputs>
+      <input type="text" name="Window Title" narrative="Current window Title" stage="Window Title" />
+    </inputs>
+    <onsuccess>b77d0650-6d9f-4d21-b574-8b57c414bb6c</onsuccess>
+  </stage>
+  <stage stageid="647d598f-1520-4e3c-8549-d17f385b24da" name="End" type="End">
+    <subsheetid>82847b7b-cfc2-41fd-b49d-7c3dcf63c6b6</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>150</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+  </stage>
+  <stage stageid="4a17d3dc-7c6a-43e6-b04a-c7daa3191492" name="Attach" type="Navigate">
+    <subsheetid>82847b7b-cfc2-41fd-b49d-7c3dcf63c6b6</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>45</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>0b296420-df96-4f11-bdcd-d4082fe7a09a</onsuccess>
+    <step>
+      <element id="f4f7ac8d-9418-4f0a-8891-1c594fb9203b" />
+      <action>
+        <id>AttachApplication</id>
+        <arguments>
+          <argument>
+            <id>WindowTitlesCollection</id>
+            <value>
+            </value>
+          </argument>
+          <argument>
+            <id>WindowTitle</id>
+            <value>[Window Title]</value>
+          </argument>
+          <argument>
+            <id>ProcessName</id>
+            <value>
+            </value>
+          </argument>
+          <argument>
+            <id>ChildIndex</id>
+            <value>
+            </value>
+          </argument>
+        </arguments>
+      </action>
+    </step>
+  </stage>
+  <stage stageid="b77d0650-6d9f-4d21-b574-8b57c414bb6c" name="Check if SAP is Connected" type="Read">
+    <subsheetid>82847b7b-cfc2-41fd-b49d-7c3dcf63c6b6</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>-75</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>ba9d7385-c3ff-4dc0-8d7e-181f8d6de35b</onsuccess>
+    <step stage="Is Connected">
+      <element id="f4f7ac8d-9418-4f0a-8891-1c594fb9203b" />
+      <action>
+        <id>IsConnected</id>
+      </action>
+    </step>
+  </stage>
+  <stage stageid="db905022-f475-4826-986b-2b059dca9230" name="Is Connected" type="Data">
+    <subsheetid>82847b7b-cfc2-41fd-b49d-7c3dcf63c6b6</subsheetid>
+    <narrative>
+    </narrative>
+    <displayx>120</displayx>
+    <displayy>-60</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>flag</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="ba9d7385-c3ff-4dc0-8d7e-181f8d6de35b" name="Already Attached?" type="Decision">
+    <subsheetid>82847b7b-cfc2-41fd-b49d-7c3dcf63c6b6</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>-15</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <decision expression="[Is Connected]" />
+    <ontrue>0b83c6b0-356e-4816-b656-24460d456051</ontrue>
+    <onfalse>4a17d3dc-7c6a-43e6-b04a-c7daa3191492</onfalse>
+  </stage>
+  <stage stageid="0b83c6b0-356e-4816-b656-24460d456051" name="End1" type="End">
+    <subsheetid>82847b7b-cfc2-41fd-b49d-7c3dcf63c6b6</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>120</displayx>
+    <displayy>-15</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+  </stage>
+  <stage stageid="4fac53b9-45af-46cf-b9cf-7ec9b01e40ad" name="Window Title" type="Data">
+    <subsheetid>82847b7b-cfc2-41fd-b49d-7c3dcf63c6b6</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>-105</displayx>
+    <displayy>-60</displayy>
+    <displaywidth>90</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="a8531aed-abf7-4de3-b02b-153d4d527e36" name="Get Cell Value" type="SubSheetInfo">
+    <subsheetid>97074fb6-0126-47cf-afd4-4431b0c1af25</subsheetid>
+    <narrative>Reading status bar from SAP window</narrative>
+    <displayx>-150</displayx>
+    <displayy>-135</displayy>
+    <displaywidth>150</displaywidth>
+    <displayheight>60</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+  </stage>
+  <stage stageid="c7c71505-a8a4-4205-a81f-26a55ad56fbb" name="Start" type="Start">
+    <subsheetid>97074fb6-0126-47cf-afd4-4431b0c1af25</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>-105</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <inputs>
+      <input type="text" name="Window Title" narrative="SAP window title" stage="Window Title" />
+      <input type="text" name="Table Name" narrative="Table SAP Adress" stage="Table Name" />
+      <input type="number" name="Row Index" narrative="Row Index in SAP Table" stage="Row Index" />
+      <input type="text" name="Column Name" narrative="Column SAP Name" stage="Column Name" />
+      <input type="number" name="Min Column" narrative="Minimum column index to be tested" stage="Min Column Index" />
+      <input type="number" name="Max Column" narrative="Maximum column index to be tested" stage="Max Column Index" />
+    </inputs>
+    <onsuccess>24d31cb7-b3ee-46b1-8523-7cc529e5d037</onsuccess>
+  </stage>
+  <stage stageid="d41a8dba-0f43-40d5-9d3e-67d8647cdb30" name="End" type="End">
+    <subsheetid>97074fb6-0126-47cf-afd4-4431b0c1af25</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>210</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <outputs>
+      <output type="text" name="Cell Value" narrative="Specified cell value" stage="Cell Value" />
+      <output type="text" name="Cell Address" narrative="Full address of specified cell" stage="Cell Address" />
+    </outputs>
+  </stage>
+  <stage stageid="62c3708c-3613-4e65-b3c6-04c2927d4e64" name="Window Title" type="Data">
+    <subsheetid>97074fb6-0126-47cf-afd4-4431b0c1af25</subsheetid>
+    <narrative>
+    </narrative>
+    <displayx>-180</displayx>
+    <displayy>-60</displayy>
+    <displaywidth>90</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="aa3e81a7-c46e-43c9-87c0-c4a5f5343b57" name="Input" type="Block">
+    <subsheetid>97074fb6-0126-47cf-afd4-4431b0c1af25</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>-240</displayx>
+    <displayy>-90</displayy>
+    <displaywidth>120</displaywidth>
+    <displayheight>285</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="7FB2E5" />
+  </stage>
+  <stage stageid="bfc64d20-7570-4e43-8b1f-b488cb39be97" name="Cell Value" type="Data">
+    <subsheetid>97074fb6-0126-47cf-afd4-4431b0c1af25</subsheetid>
+    <narrative>
+    </narrative>
+    <displayx>-180</displayx>
+    <displayy>240</displayy>
+    <displaywidth>90</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="e3697d25-a459-4365-b900-e0d85586d191" name="Output" type="Block">
+    <subsheetid>97074fb6-0126-47cf-afd4-4431b0c1af25</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>-240</displayx>
+    <displayy>210</displayy>
+    <displaywidth>120</displaywidth>
+    <displayheight>105</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="7FB2E5" />
+  </stage>
+  <stage stageid="2102600d-db2c-4f5e-9fc0-032eef4c8f76" name="Table Name" type="Data">
+    <subsheetid>97074fb6-0126-47cf-afd4-4431b0c1af25</subsheetid>
+    <narrative>
+    </narrative>
+    <displayx>-180</displayx>
+    <displayy>-15</displayy>
+    <displaywidth>90</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="de06b807-f66d-4c3d-bf33-01881ad6d895" name="Cell Address" type="Data">
+    <subsheetid>97074fb6-0126-47cf-afd4-4431b0c1af25</subsheetid>
+    <narrative>
+    </narrative>
+    <displayx>-180</displayx>
+    <displayy>285</displayy>
+    <displaywidth>90</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="dbff5d51-55c9-4644-9199-e2a282ec2675" name="Row Index" type="Data">
+    <subsheetid>97074fb6-0126-47cf-afd4-4431b0c1af25</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>-180</displayx>
+    <displayy>30</displayy>
+    <displaywidth>90</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>number</datatype>
+    <initialvalue>0</initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="a6a4fb3c-173b-45e8-919c-ea610513a677" name="Column Name" type="Data">
+    <subsheetid>97074fb6-0126-47cf-afd4-4431b0c1af25</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>-180</displayx>
+    <displayy>75</displayy>
+    <displaywidth>90</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="9a0de783-7abb-41b8-b5f9-5c7cb69cce3a" name="Column Index" type="Data">
+    <subsheetid>97074fb6-0126-47cf-afd4-4431b0c1af25</subsheetid>
+    <narrative>
+    </narrative>
+    <displayx>180</displayx>
+    <displayy>30</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>number</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="a080e403-1660-4905-80c4-a346582d7246" name="Calc Cell Address" type="Calculation">
+    <subsheetid>97074fb6-0126-47cf-afd4-4431b0c1af25</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>90</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>12f54520-a9f9-4655-bbfc-27a55e24b4b9</onsuccess>
+    <calculation expression="[Table Name] &amp; &quot;/&quot; &amp; [Column Name] &amp; &quot;[&quot; &amp; [Column Index]  &amp; &quot;,&quot; &amp; [Row Index] &amp; &quot;]&quot;" stage="Cell Address" />
+  </stage>
+  <stage stageid="2efdbd10-131c-4e3f-9115-59bc1d95eaf7" name="Next Column Index" type="Calculation">
+    <subsheetid>97074fb6-0126-47cf-afd4-4431b0c1af25</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>105</displayx>
+    <displayy>30</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>4804aaf4-987b-4743-a404-6e9476705ea9</onsuccess>
+    <calculation expression="[Column Index]+1" stage="Column Index" />
+  </stage>
+  <stage stageid="108c69c2-2d54-4fe5-aab7-0a5cd72506b3" name="Recover" type="Recover">
+    <subsheetid>97074fb6-0126-47cf-afd4-4431b0c1af25</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>105</displayx>
+    <displayy>150</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>1e3f00db-17f7-4796-9f70-a1e3b3cc5cba</onsuccess>
+  </stage>
+  <stage stageid="1e3f00db-17f7-4796-9f70-a1e3b3cc5cba" name="Resume" type="Resume">
+    <subsheetid>97074fb6-0126-47cf-afd4-4431b0c1af25</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>105</displayx>
+    <displayy>90</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>2efdbd10-131c-4e3f-9115-59bc1d95eaf7</onsuccess>
+  </stage>
+  <stage stageid="fd713482-47c0-4060-b5cf-bee6cc0cb065" name="Match Column Index" type="Block">
+    <subsheetid>97074fb6-0126-47cf-afd4-4431b0c1af25</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>-30</displayx>
+    <displayy>120</displayy>
+    <displaywidth>180</displaywidth>
+    <displayheight>60</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="7FB2E5" />
+  </stage>
+  <stage stageid="12f54520-a9f9-4655-bbfc-27a55e24b4b9" name="Read Cell" type="Read">
+    <subsheetid>97074fb6-0126-47cf-afd4-4431b0c1af25</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>150</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>d41a8dba-0f43-40d5-9d3e-67d8647cdb30</onsuccess>
+    <step stage="Cell Value">
+      <element id="f228761f-1cbe-4a1d-ac64-ca0691c377b1">
+        <elementparameter>
+          <name>ID</name>
+          <expression>[Cell Address]</expression>
+          <datatype>text</datatype>
+          <comparisontype>Equal</comparisontype>
+        </elementparameter>
+      </element>
+      <action>
+        <id>GetWindowText</id>
+      </action>
+    </step>
+  </stage>
+  <stage stageid="ca17ad31-54c7-40a9-aa17-2c545aea0e81" name="Min Column Index" type="Data">
+    <subsheetid>97074fb6-0126-47cf-afd4-4431b0c1af25</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>-180</displayx>
+    <displayy>120</displayy>
+    <displaywidth>90</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>number</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="5897bf54-5794-4fa9-8372-8296e48e333f" name="Max Column Index" type="Data">
+    <subsheetid>97074fb6-0126-47cf-afd4-4431b0c1af25</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>-180</displayx>
+    <displayy>165</displayy>
+    <displaywidth>90</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>number</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="ae039116-8bf0-4793-95d1-763f9359c408" name="Start Column Index" type="Calculation">
+    <subsheetid>97074fb6-0126-47cf-afd4-4431b0c1af25</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>-15</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>4804aaf4-987b-4743-a404-6e9476705ea9</onsuccess>
+    <calculation expression="[Min Column Index]" stage="Column Index" />
+  </stage>
+  <stage stageid="4804aaf4-987b-4743-a404-6e9476705ea9" name="Limit Exceeded?" type="Decision">
+    <subsheetid>97074fb6-0126-47cf-afd4-4431b0c1af25</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>30</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <decision expression="[Max Column Index]&lt;[Column Index]" />
+    <ontrue>10c76cb1-1952-44c5-8370-db181f1b27b6</ontrue>
+    <onfalse>a080e403-1660-4905-80c4-a346582d7246</onfalse>
+  </stage>
+  <stage stageid="10c76cb1-1952-44c5-8370-db181f1b27b6" name="SE - Column Not Found" type="Exception">
+    <subsheetid>97074fb6-0126-47cf-afd4-4431b0c1af25</subsheetid>
+    <narrative>
+    </narrative>
+    <displayx>-75</displayx>
+    <displayy>30</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <exception type="System Exception" detail="&quot;Provided column name has not been found&quot;" />
+  </stage>
+  <stage stageid="086ce428-47cf-42f6-907f-f41a14a8ef9a" name="Choose Cell" type="SubSheetInfo">
+    <subsheetid>a5d50418-42b5-446e-a838-a8fcfeb59117</subsheetid>
+    <narrative>Key F2 action or double click. Entering cell (record) details.</narrative>
+    <displayx>-15</displayx>
+    <displayy>-180</displayy>
+    <displaywidth>150</displaywidth>
+    <displayheight>60</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+  </stage>
+  <stage stageid="7e368fef-c08b-4866-a2c4-060915b7544a" name="Start" type="Start">
+    <subsheetid>a5d50418-42b5-446e-a838-a8fcfeb59117</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>105</displayx>
+    <displayy>-135</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <inputs>
+      <input type="text" name="Cell Address" narrative="Address of cell to be choosen" stage="Cell Address" />
+      <input type="text" name="Window Title" narrative="Title of window where table is." stage="Window Title" />
+      <input type="number" name="Session ID" narrative="Current SAP session ID" stage="Session ID" />
+      <input type="number" name="Connection ID" narrative="Current SAP session ID" stage="Connection ID" />
+    </inputs>
+    <onsuccess>a0f35469-7d7c-44d7-b269-1b087df343e0</onsuccess>
+  </stage>
+  <stage stageid="ba89fd71-97f4-45c6-b26d-7ecb17cd6909" name="End" type="End">
+    <subsheetid>a5d50418-42b5-446e-a838-a8fcfeb59117</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>105</displayx>
+    <displayy>60</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+  </stage>
+  <stage stageid="1e05209e-da72-4934-be9b-2ee3ba384fb7" name="Cell Address" type="Data">
+    <subsheetid>a5d50418-42b5-446e-a838-a8fcfeb59117</subsheetid>
+    <narrative>
+    </narrative>
+    <displayx>-30</displayx>
+    <displayy>-45</displayy>
+    <displaywidth>90</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="71c814c8-5eb6-424c-bfc1-3a6f87177490" name="Window Title" type="Data">
+    <subsheetid>a5d50418-42b5-446e-a838-a8fcfeb59117</subsheetid>
+    <narrative>
+    </narrative>
+    <displayx>-30</displayx>
+    <displayy>-90</displayy>
+    <displaywidth>90</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="bf6f0a4d-5edc-40ab-a1d6-827f92bde6ea" name="Input" type="Block">
+    <subsheetid>a5d50418-42b5-446e-a838-a8fcfeb59117</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>-90</displayx>
+    <displayy>-120</displayy>
+    <displaywidth>120</displaywidth>
+    <displayheight>195</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="7FB2E5" />
+  </stage>
+  <stage stageid="f2bb9cd0-14a3-4660-b077-1918e3fdf07f" name="Set Cell Value" type="SubSheetInfo">
+    <subsheetid>68526aea-29c1-4d9b-8733-3e362ae07739</subsheetid>
+    <narrative>Setting provided value to the specified cell</narrative>
+    <displayx>-135</displayx>
+    <displayy>-210</displayy>
+    <displaywidth>150</displaywidth>
+    <displayheight>60</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+  </stage>
+  <stage stageid="ad920a09-d87d-4983-adae-c6ce30fd090c" name="Start" type="Start">
+    <subsheetid>68526aea-29c1-4d9b-8733-3e362ae07739</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>-195</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <inputs>
+      <input type="text" name="Window Title" narrative="SAP window title" stage="Window Title" />
+      <input type="text" name="Table Name" narrative="Table SAP Adress" stage="Table Name" />
+      <input type="number" name="Row Index" narrative="Row Index in SAP Table" stage="Row Index" />
+      <input type="text" name="Column Name" narrative="Column SAP Name" stage="Column Name" />
+      <input type="number" name="Min Column" narrative="Minimum column index to be tested" stage="Min Column Index" />
+      <input type="number" name="Max Column" narrative="Maximum column index to be tested" stage="Max Column Index" />
+      <input type="text" name="New Cell Value" narrative="New cell value to be set" stage="New Cell Value" />
+      <input type="flag" name="Clear by DEL" narrative="lternative BACKSPACE" stage="Clear by DEL" />
+    </inputs>
+    <onsuccess>5ff22d6e-2cf9-44cd-8774-bbafec2fb81f</onsuccess>
+  </stage>
+  <stage stageid="026dc594-04bf-4b1f-ba07-984906fde6d6" name="End" type="End">
+    <subsheetid>68526aea-29c1-4d9b-8733-3e362ae07739</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>540</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <outputs>
+      <output type="text" name="Cell Address" narrative="Full address of specified cell" stage="Cell Address" />
+    </outputs>
+  </stage>
+  <stage stageid="b0b3678f-dd65-4aaf-b82b-043bf67a3149" name="Window Title" type="Data">
+    <subsheetid>68526aea-29c1-4d9b-8733-3e362ae07739</subsheetid>
+    <narrative>
+    </narrative>
+    <displayx>-195</displayx>
+    <displayy>-60</displayy>
+    <displaywidth>90</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="7ebd20a2-9778-49ae-b1be-9df182053895" name="Input" type="Block">
+    <subsheetid>68526aea-29c1-4d9b-8733-3e362ae07739</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>-255</displayx>
+    <displayy>-135</displayy>
+    <displaywidth>120</displaywidth>
+    <displayheight>375</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="7FB2E5" />
+  </stage>
+  <stage stageid="54fa453c-6002-4305-aee6-b9da787a88a1" name="Output" type="Block">
+    <subsheetid>68526aea-29c1-4d9b-8733-3e362ae07739</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>-255</displayx>
+    <displayy>255</displayy>
+    <displaywidth>120</displaywidth>
+    <displayheight>60</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="7FB2E5" />
+  </stage>
+  <stage stageid="3ced39fb-316a-4778-8ede-6344b7e1d242" name="Table Name" type="Data">
+    <subsheetid>68526aea-29c1-4d9b-8733-3e362ae07739</subsheetid>
+    <narrative>
+    </narrative>
+    <displayx>-195</displayx>
+    <displayy>-15</displayy>
+    <displaywidth>90</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="b537cc4d-1584-40fb-bffe-2aa815ff9d91" name="Cell Address" type="Data">
+    <subsheetid>68526aea-29c1-4d9b-8733-3e362ae07739</subsheetid>
+    <narrative>
+    </narrative>
+    <displayx>-195</displayx>
+    <displayy>285</displayy>
+    <displaywidth>90</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="5120b5cf-55f1-44de-8075-47c1d885cd65" name="Row Index" type="Data">
+    <subsheetid>68526aea-29c1-4d9b-8733-3e362ae07739</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>-195</displayx>
+    <displayy>30</displayy>
+    <displaywidth>90</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>number</datatype>
+    <initialvalue>0</initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="40d3613f-3763-4ffd-b0bc-3b094d9203df" name="Column Name" type="Data">
+    <subsheetid>68526aea-29c1-4d9b-8733-3e362ae07739</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>-195</displayx>
+    <displayy>75</displayy>
+    <displaywidth>90</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="d1c3ce4f-38c5-4ced-b61f-af511b35a7d3" name="Column Index" type="Data">
+    <subsheetid>68526aea-29c1-4d9b-8733-3e362ae07739</subsheetid>
+    <narrative>
+    </narrative>
+    <displayx>180</displayx>
+    <displayy>30</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>number</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="2d08f723-1935-4913-8a12-4478bda5c6b7" name="Calc Cell Address" type="Calculation">
+    <subsheetid>68526aea-29c1-4d9b-8733-3e362ae07739</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>90</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>9951ff39-d77b-4aec-9eab-6f871eee6619</onsuccess>
+    <calculation expression="[Table Name] &amp; &quot;/&quot; &amp; [Column Name] &amp; &quot;[&quot; &amp; [Column Index]  &amp; &quot;,&quot; &amp; [Row Index] &amp; &quot;]&quot;" stage="Cell Address" />
+  </stage>
+  <stage stageid="37af3ab2-7b6a-43ce-9239-12ac96c6075e" name="Next Column Index" type="Calculation">
+    <subsheetid>68526aea-29c1-4d9b-8733-3e362ae07739</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>105</displayx>
+    <displayy>30</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>75303fa7-0b89-4770-81b3-6e705d4094e1</onsuccess>
+    <calculation expression="[Column Index]+1" stage="Column Index" />
+  </stage>
+  <stage stageid="e12fccdd-a256-469a-b03a-89518fadccb8" name="Recover" type="Recover">
+    <subsheetid>68526aea-29c1-4d9b-8733-3e362ae07739</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>105</displayx>
+    <displayy>150</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>d4ddca26-c6c1-4a47-94f1-3aee4f642fc8</onsuccess>
+  </stage>
+  <stage stageid="d4ddca26-c6c1-4a47-94f1-3aee4f642fc8" name="Resume" type="Resume">
+    <subsheetid>68526aea-29c1-4d9b-8733-3e362ae07739</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>105</displayx>
+    <displayy>90</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>37af3ab2-7b6a-43ce-9239-12ac96c6075e</onsuccess>
+  </stage>
+  <stage stageid="39fe1820-5015-45e5-97f9-06d1bac1c5ce" name="Match Column Index" type="Block">
+    <subsheetid>68526aea-29c1-4d9b-8733-3e362ae07739</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>-30</displayx>
+    <displayy>120</displayy>
+    <displaywidth>180</displaywidth>
+    <displayheight>60</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="7FB2E5" />
+  </stage>
+  <stage stageid="cfad66d7-1722-4714-829f-c2f8c88917b3" name="Min Column Index" type="Data">
+    <subsheetid>68526aea-29c1-4d9b-8733-3e362ae07739</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>-195</displayx>
+    <displayy>120</displayy>
+    <displaywidth>90</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>number</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="75ba0f0c-b89e-4650-ae10-30638fa2df89" name="Max Column Index" type="Data">
+    <subsheetid>68526aea-29c1-4d9b-8733-3e362ae07739</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>-195</displayx>
+    <displayy>165</displayy>
+    <displaywidth>90</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>number</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="c23c4c8a-6696-43e5-880a-f07a65fc0eb8" name="Start Column Index" type="Calculation">
+    <subsheetid>68526aea-29c1-4d9b-8733-3e362ae07739</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>-15</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>75303fa7-0b89-4770-81b3-6e705d4094e1</onsuccess>
+    <calculation expression="[Min Column Index]" stage="Column Index" />
+  </stage>
+  <stage stageid="75303fa7-0b89-4770-81b3-6e705d4094e1" name="Limit Exceeded?" type="Decision">
+    <subsheetid>68526aea-29c1-4d9b-8733-3e362ae07739</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>30</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <decision expression="[Max Column Index]&lt;[Column Index]" />
+    <ontrue>50b63f61-8025-4cf5-ac69-07a4a090bdcc</ontrue>
+    <onfalse>2d08f723-1935-4913-8a12-4478bda5c6b7</onfalse>
+  </stage>
+  <stage stageid="50b63f61-8025-4cf5-ac69-07a4a090bdcc" name="SE - Column Not Found" type="Exception">
+    <subsheetid>68526aea-29c1-4d9b-8733-3e362ae07739</subsheetid>
+    <narrative>
+    </narrative>
+    <displayx>-75</displayx>
+    <displayy>30</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <exception type="System Exception" detail="&quot;Provided column name has not been found&quot;" />
+  </stage>
+  <stage stageid="b03eb96b-bb36-4860-b2ea-c805268a36ff" name="New Cell Value" type="Data">
+    <subsheetid>68526aea-29c1-4d9b-8733-3e362ae07739</subsheetid>
+    <narrative>
+    </narrative>
+    <displayx>-195</displayx>
+    <displayy>-105</displayy>
+    <displaywidth>90</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="86bf7d03-3426-495b-98dc-71491086db6f" name="Recover" type="Recover">
+    <subsheetid>82847b7b-cfc2-41fd-b49d-7c3dcf63c6b6</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>105</displayx>
+    <displayy>45</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>f5ac7392-4fbc-40aa-b341-aec7295a8820</onsuccess>
+  </stage>
+  <stage stageid="f5ac7392-4fbc-40aa-b341-aec7295a8820" name="SE - Application Error" type="Exception">
+    <subsheetid>82847b7b-cfc2-41fd-b49d-7c3dcf63c6b6</subsheetid>
+    <narrative>
+    </narrative>
+    <displayx>210</displayx>
+    <displayy>45</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <exception type="System Exception" detail="&quot;Application couldn't be attached!&quot;" />
+  </stage>
+  <stage stageid="7d602b31-3c82-4bf1-b98f-8bbb4d90c1e8" name="Error" type="Block">
+    <subsheetid>82847b7b-cfc2-41fd-b49d-7c3dcf63c6b6</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>-30</displayx>
+    <displayy>15</displayy>
+    <displaywidth>180</displaywidth>
+    <displayheight>60</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="7FB2E5" />
+  </stage>
+  <stage stageid="5d167af8-e75a-4f6e-b15e-369462fcea1a" name="Activate" type="Navigate">
+    <subsheetid>68526aea-29c1-4d9b-8733-3e362ae07739</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>-105</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>677edebb-87eb-4e11-b2c3-65158f2d2944</onsuccess>
+    <step>
+      <element id="e950628b-77a2-4515-ac75-09cdb7229cea">
+        <elementparameter>
+          <name>WindowText</name>
+          <expression>[Window Title]</expression>
+          <datatype>text</datatype>
+          <comparisontype>Wildcard</comparisontype>
+        </elementparameter>
+      </element>
+      <action>
+        <id>ActivateApp</id>
+      </action>
+    </step>
+  </stage>
+  <stage stageid="9951ff39-d77b-4aec-9eab-6f871eee6619" name="Set Focus" type="Navigate">
+    <subsheetid>68526aea-29c1-4d9b-8733-3e362ae07739</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>150</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>1ab26c2a-ef1e-493f-8ed9-117cddde5cc6</onsuccess>
+    <step>
+      <element id="f228761f-1cbe-4a1d-ac64-ca0691c377b1">
+        <elementparameter>
+          <name>ID</name>
+          <expression>[Cell Address]</expression>
+          <datatype>text</datatype>
+          <comparisontype>Equal</comparisontype>
+        </elementparameter>
+      </element>
+      <action>
+        <id>SetFocus</id>
+      </action>
+    </step>
+  </stage>
+  <stage stageid="c0f97fbd-ed81-4619-ae43-95972ca6fc8b" name="Time Out - XS" type="WaitEnd">
+    <subsheetid>68526aea-29c1-4d9b-8733-3e362ae07739</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>45</displayx>
+    <displayy>210</displayy>
+    <displaywidth>30</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>b58a4ade-12c9-4b8e-9168-2d9415f5f118</onsuccess>
+    <groupid>efb37d6c-751f-48cb-89da-1e9a6ea3dba4</groupid>
+  </stage>
+  <stage stageid="1ab26c2a-ef1e-493f-8ed9-117cddde5cc6" name="XS" type="WaitStart">
+    <subsheetid>68526aea-29c1-4d9b-8733-3e362ae07739</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>-15</displayx>
+    <displayy>210</displayy>
+    <displaywidth>30</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <groupid>efb37d6c-751f-48cb-89da-1e9a6ea3dba4</groupid>
+    <choices />
+    <timeout>[XS]</timeout>
+  </stage>
+  <stage stageid="17532f16-35ca-481b-a8ef-c410e25ea663" name="Time Out - XS" type="WaitEnd">
+    <subsheetid>68526aea-29c1-4d9b-8733-3e362ae07739</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>45</displayx>
+    <displayy>-60</displayy>
+    <displaywidth>30</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>c23c4c8a-6696-43e5-880a-f07a65fc0eb8</onsuccess>
+    <groupid>8439569d-a630-477a-a6b2-1b5c811e0534</groupid>
+  </stage>
+  <stage stageid="677edebb-87eb-4e11-b2c3-65158f2d2944" name="XS" type="WaitStart">
+    <subsheetid>68526aea-29c1-4d9b-8733-3e362ae07739</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>-15</displayx>
+    <displayy>-60</displayy>
+    <displaywidth>30</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <groupid>8439569d-a630-477a-a6b2-1b5c811e0534</groupid>
+    <choices />
+    <timeout>[XS]</timeout>
+  </stage>
+  <stage stageid="3591e96e-c57c-4fab-aed5-ffe90f74814e" name="Time Out - S" type="WaitEnd">
+    <subsheetid>a5d50418-42b5-446e-a838-a8fcfeb59117</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>135</displayx>
+    <displayy>15</displayy>
+    <displaywidth>30</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>ba89fd71-97f4-45c6-b26d-7ecb17cd6909</onsuccess>
+    <groupid>c2bb4b11-2853-46eb-8cba-e9a12fb34b4a</groupid>
+  </stage>
+  <stage stageid="02759775-50fc-457a-9ebc-0775f0231b87" name="S" type="WaitStart">
+    <subsheetid>a5d50418-42b5-446e-a838-a8fcfeb59117</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>75</displayx>
+    <displayy>15</displayy>
+    <displaywidth>30</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <groupid>c2bb4b11-2853-46eb-8cba-e9a12fb34b4a</groupid>
+    <choices />
+    <timeout>[S]</timeout>
+  </stage>
+  <stage stageid="f53fa8f6-c27c-413b-b381-dfe9597b3829" name="Time Out - S" type="WaitEnd">
+    <subsheetid>82847b7b-cfc2-41fd-b49d-7c3dcf63c6b6</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>45</displayx>
+    <displayy>105</displayy>
+    <displaywidth>30</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>647d598f-1520-4e3c-8549-d17f385b24da</onsuccess>
+    <groupid>767560d3-6c74-4d3d-abc5-d94b1458e475</groupid>
+  </stage>
+  <stage stageid="0b296420-df96-4f11-bdcd-d4082fe7a09a" name="S" type="WaitStart">
+    <subsheetid>82847b7b-cfc2-41fd-b49d-7c3dcf63c6b6</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>-15</displayx>
+    <displayy>105</displayy>
+    <displaywidth>30</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <groupid>767560d3-6c74-4d3d-abc5-d94b1458e475</groupid>
+    <choices />
+    <timeout>[S]</timeout>
+  </stage>
+  <stage stageid="a375ae0c-ff6a-4773-8665-f2d21209380d" name="Input" type="Block">
+    <subsheetid>82847b7b-cfc2-41fd-b49d-7c3dcf63c6b6</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>-165</displayx>
+    <displayy>-90</displayy>
+    <displaywidth>120</displaywidth>
+    <displayheight>60</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="7FB2E5" />
+  </stage>
+  <stage stageid="854e32e1-d1bc-4200-9bfe-285920ad00b9" name="Clear DEL" type="Navigate">
+    <subsheetid>68526aea-29c1-4d9b-8733-3e362ae07739</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>-30</displayx>
+    <displayy>315</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>f86a8152-22ce-430c-bc23-a70def00dd5b</onsuccess>
+    <step>
+      <element id="f4f7ac8d-9418-4f0a-8891-1c594fb9203b" />
+      <action>
+        <id>SendKeys</id>
+        <arguments>
+          <argument>
+            <id>newtext</id>
+            <value>"{DEL 20}"</value>
+          </argument>
+        </arguments>
+      </action>
+    </step>
+  </stage>
+  <stage stageid="ad3f3f31-3aea-4e23-9236-5ab3916e0687" name="Time Out - S" type="WaitEnd">
+    <subsheetid>68526aea-29c1-4d9b-8733-3e362ae07739</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>45</displayx>
+    <displayy>405</displayy>
+    <displaywidth>30</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>34488ae9-6161-4b21-b33b-706105805cf6</onsuccess>
+    <groupid>f29b8c71-1f72-472a-a8e1-2b40131ecf87</groupid>
+  </stage>
+  <stage stageid="62b0fcd4-1454-457d-a5ab-191ceb1348c5" name="S" type="WaitStart">
+    <subsheetid>68526aea-29c1-4d9b-8733-3e362ae07739</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>-15</displayx>
+    <displayy>405</displayy>
+    <displaywidth>30</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <groupid>f29b8c71-1f72-472a-a8e1-2b40131ecf87</groupid>
+    <choices />
+    <timeout>[S]</timeout>
+  </stage>
+  <stage stageid="fcd363fb-f76a-43ec-a53b-0db1f6f8398a" name="Time Out - S" type="WaitEnd">
+    <subsheetid>68526aea-29c1-4d9b-8733-3e362ae07739</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>45</displayx>
+    <displayy>495</displayy>
+    <displaywidth>30</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>026dc594-04bf-4b1f-ba07-984906fde6d6</onsuccess>
+    <groupid>550a254b-ba1b-4d3b-bb18-29d35adf6504</groupid>
+  </stage>
+  <stage stageid="1cd961b5-1371-492f-b5f3-b3245b8091eb" name="S" type="WaitStart">
+    <subsheetid>68526aea-29c1-4d9b-8733-3e362ae07739</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>-15</displayx>
+    <displayy>495</displayy>
+    <displaywidth>30</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <groupid>550a254b-ba1b-4d3b-bb18-29d35adf6504</groupid>
+    <choices />
+    <timeout>[S]</timeout>
+  </stage>
+  <stage stageid="34488ae9-6161-4b21-b33b-706105805cf6" name="Send Keys" type="Navigate">
+    <subsheetid>68526aea-29c1-4d9b-8733-3e362ae07739</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>450</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>1cd961b5-1371-492f-b5f3-b3245b8091eb</onsuccess>
+    <step>
+      <element id="f4f7ac8d-9418-4f0a-8891-1c594fb9203b" />
+      <action>
+        <id>SendKeys</id>
+        <arguments>
+          <argument>
+            <id>newtext</id>
+            <value>[New Cell Value]</value>
+          </argument>
+        </arguments>
+      </action>
+    </step>
+  </stage>
+  <stage stageid="0a96a465-f439-449f-b731-1f468ece20fb" name="Set Cell Value" type="SubSheetInfo">
+    <subsheetid>71e5e501-5868-4e7e-830d-1aefe3709b3d</subsheetid>
+    <narrative>Setting provided value to the specified cell</narrative>
+    <displayx>-135</displayx>
+    <displayy>-210</displayy>
+    <displaywidth>150</displaywidth>
+    <displayheight>60</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+  </stage>
+  <stage stageid="d99c21c2-c6a2-45da-b06c-79c10989013a" name="Start" type="Start">
+    <subsheetid>71e5e501-5868-4e7e-830d-1aefe3709b3d</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>-195</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <inputs>
+      <input type="text" name="Window Title" narrative="SAP window title" stage="Window Title" />
+      <input type="text" name="Table Name" narrative="Table SAP Adress" stage="Table Name" />
+      <input type="number" name="Row Index" narrative="Row Index in SAP Table" stage="Row Index" />
+      <input type="text" name="Column Name" narrative="Column SAP Name" stage="Column Name" />
+      <input type="number" name="Min Column" narrative="Minimum column index to be tested" stage="Min Column Index" />
+      <input type="number" name="Max Column" narrative="Maximum column index to be tested" stage="Max Column Index" />
+      <input type="text" name="Event Keys" narrative="Event keys text" stage="Event" />
+    </inputs>
+    <onsuccess>0c37ca3c-3be1-43a9-9c90-f1e71474cf99</onsuccess>
+  </stage>
+  <stage stageid="27987d74-10eb-47b5-b78e-b35b04cd1258" name="End" type="End">
+    <subsheetid>71e5e501-5868-4e7e-830d-1aefe3709b3d</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>345</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <outputs>
+      <output type="text" name="Cell Address" narrative="Full address of specified cell" stage="Cell Address" />
+    </outputs>
+  </stage>
+  <stage stageid="08f08411-3264-4fa6-a570-3c38893c94e3" name="Window Title" type="Data">
+    <subsheetid>71e5e501-5868-4e7e-830d-1aefe3709b3d</subsheetid>
+    <narrative>
+    </narrative>
+    <displayx>-180</displayx>
+    <displayy>-90</displayy>
+    <displaywidth>90</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="a30c1b4d-01f0-4e76-9a0a-951a1d16c616" name="Input" type="Block">
+    <subsheetid>71e5e501-5868-4e7e-830d-1aefe3709b3d</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>-240</displayx>
+    <displayy>-165</displayy>
+    <displaywidth>120</displaywidth>
+    <displayheight>330</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="7FB2E5" />
+  </stage>
+  <stage stageid="12f1c7dc-5d21-4926-b2b7-f8032ac9b13a" name="Output" type="Block">
+    <subsheetid>71e5e501-5868-4e7e-830d-1aefe3709b3d</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>-240</displayx>
+    <displayy>180</displayy>
+    <displaywidth>120</displaywidth>
+    <displayheight>60</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="7FB2E5" />
+  </stage>
+  <stage stageid="80b44972-337a-4ea8-b6c0-173e4b93fa4b" name="Table Name" type="Data">
+    <subsheetid>71e5e501-5868-4e7e-830d-1aefe3709b3d</subsheetid>
+    <narrative>
+    </narrative>
+    <displayx>-180</displayx>
+    <displayy>-45</displayy>
+    <displaywidth>90</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="b5f45679-37e1-4140-8ba2-249408350040" name="Cell Address" type="Data">
+    <subsheetid>71e5e501-5868-4e7e-830d-1aefe3709b3d</subsheetid>
+    <narrative>
+    </narrative>
+    <displayx>-180</displayx>
+    <displayy>210</displayy>
+    <displaywidth>90</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="a5dc96aa-c9b4-42fc-8f04-c038c7085eef" name="Row Index" type="Data">
+    <subsheetid>71e5e501-5868-4e7e-830d-1aefe3709b3d</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>-180</displayx>
+    <displayy>0</displayy>
+    <displaywidth>90</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>number</datatype>
+    <initialvalue>0</initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="be73793d-c640-408c-9de7-1c35ba3676a8" name="Column Name" type="Data">
+    <subsheetid>71e5e501-5868-4e7e-830d-1aefe3709b3d</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>-180</displayx>
+    <displayy>45</displayy>
+    <displaywidth>90</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="354a487e-506c-477b-96ab-3166aaee5c49" name="Column Index" type="Data">
+    <subsheetid>71e5e501-5868-4e7e-830d-1aefe3709b3d</subsheetid>
+    <narrative>
+    </narrative>
+    <displayx>180</displayx>
+    <displayy>30</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>number</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="22f1b487-a190-4fb5-bef3-f42f0ef15712" name="Calc Cell Address" type="Calculation">
+    <subsheetid>71e5e501-5868-4e7e-830d-1aefe3709b3d</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>90</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>8043ec2c-224b-46d4-9528-87510f9ad911</onsuccess>
+    <calculation expression="[Table Name] &amp; &quot;/&quot; &amp; [Column Name] &amp; &quot;[&quot; &amp; [Column Index]  &amp; &quot;,&quot; &amp; [Row Index] &amp; &quot;]&quot;" stage="Cell Address" />
+  </stage>
+  <stage stageid="9a40b227-c2c3-46dc-8183-f1603b810406" name="Next Column Index" type="Calculation">
+    <subsheetid>71e5e501-5868-4e7e-830d-1aefe3709b3d</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>105</displayx>
+    <displayy>30</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>366f91b7-b67f-4d6b-b472-216e51346aed</onsuccess>
+    <calculation expression="[Column Index]+1" stage="Column Index" />
+  </stage>
+  <stage stageid="63f0416b-5f9d-4108-8987-12369b20e0a0" name="Recover" type="Recover">
+    <subsheetid>71e5e501-5868-4e7e-830d-1aefe3709b3d</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>105</displayx>
+    <displayy>150</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>4cfe6078-4480-41fb-995b-2f40bfd3ecae</onsuccess>
+  </stage>
+  <stage stageid="4cfe6078-4480-41fb-995b-2f40bfd3ecae" name="Resume" type="Resume">
+    <subsheetid>71e5e501-5868-4e7e-830d-1aefe3709b3d</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>105</displayx>
+    <displayy>90</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>9a40b227-c2c3-46dc-8183-f1603b810406</onsuccess>
+  </stage>
+  <stage stageid="f81c4b53-11f5-43b9-9570-a93c83fb279e" name="Match Column Index" type="Block">
+    <subsheetid>71e5e501-5868-4e7e-830d-1aefe3709b3d</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>-30</displayx>
+    <displayy>120</displayy>
+    <displaywidth>180</displaywidth>
+    <displayheight>60</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="7FB2E5" />
+  </stage>
+  <stage stageid="90a6eb96-8ec6-4e61-97c9-e3c6da507f01" name="Min Column Index" type="Data">
+    <subsheetid>71e5e501-5868-4e7e-830d-1aefe3709b3d</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>-180</displayx>
+    <displayy>90</displayy>
+    <displaywidth>90</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>number</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="03c89cb7-4b27-48e9-b503-2189c3834316" name="Max Column Index" type="Data">
+    <subsheetid>71e5e501-5868-4e7e-830d-1aefe3709b3d</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>-180</displayx>
+    <displayy>135</displayy>
+    <displaywidth>90</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>number</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="db73716f-eb27-44b2-99a9-110d1a874c2d" name="Start Column Index" type="Calculation">
+    <subsheetid>71e5e501-5868-4e7e-830d-1aefe3709b3d</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>-15</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>366f91b7-b67f-4d6b-b472-216e51346aed</onsuccess>
+    <calculation expression="[Min Column Index]" stage="Column Index" />
+  </stage>
+  <stage stageid="366f91b7-b67f-4d6b-b472-216e51346aed" name="Limit Exceeded?" type="Decision">
+    <subsheetid>71e5e501-5868-4e7e-830d-1aefe3709b3d</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>30</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <decision expression="[Max Column Index]&lt;[Column Index]" />
+    <ontrue>cd9f1824-0246-44b6-a0e2-b1161854dd8a</ontrue>
+    <onfalse>22f1b487-a190-4fb5-bef3-f42f0ef15712</onfalse>
+  </stage>
+  <stage stageid="cd9f1824-0246-44b6-a0e2-b1161854dd8a" name="SE - Column Not Found" type="Exception">
+    <subsheetid>71e5e501-5868-4e7e-830d-1aefe3709b3d</subsheetid>
+    <narrative>
+    </narrative>
+    <displayx>-75</displayx>
+    <displayy>30</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <exception type="System Exception" detail="&quot;Provided column name has not been found&quot;" />
+  </stage>
+  <stage stageid="5d26861b-4029-4574-bf11-97fe949a1320" name="Event" type="Data">
+    <subsheetid>71e5e501-5868-4e7e-830d-1aefe3709b3d</subsheetid>
+    <narrative>
+    </narrative>
+    <displayx>-180</displayx>
+    <displayy>-135</displayy>
+    <displaywidth>90</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="c05c901c-e3ae-4872-961b-45d65c25fe95" name="Activate" type="Navigate">
+    <subsheetid>71e5e501-5868-4e7e-830d-1aefe3709b3d</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>-105</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>9d7bee00-f210-4264-8034-e8b8ac123d88</onsuccess>
+    <step>
+      <element id="e950628b-77a2-4515-ac75-09cdb7229cea">
+        <elementparameter>
+          <name>WindowText</name>
+          <expression>[Window Title]</expression>
+          <datatype>text</datatype>
+          <comparisontype>Wildcard</comparisontype>
+        </elementparameter>
+      </element>
+      <action>
+        <id>ActivateApp</id>
+      </action>
+    </step>
+  </stage>
+  <stage stageid="8043ec2c-224b-46d4-9528-87510f9ad911" name="Set Focus" type="Navigate">
+    <subsheetid>71e5e501-5868-4e7e-830d-1aefe3709b3d</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>150</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>b4ee57df-1f2b-40a2-9316-7d27a4368a55</onsuccess>
+    <step>
+      <element id="f228761f-1cbe-4a1d-ac64-ca0691c377b1">
+        <elementparameter>
+          <name>ID</name>
+          <expression>[Cell Address]</expression>
+          <datatype>text</datatype>
+          <comparisontype>Equal</comparisontype>
+        </elementparameter>
+      </element>
+      <action>
+        <id>SetFocus</id>
+      </action>
+    </step>
+  </stage>
+  <stage stageid="dd2aa127-7b98-42c8-abc2-5f682e7517d7" name="Time Out - XS" type="WaitEnd">
+    <subsheetid>71e5e501-5868-4e7e-830d-1aefe3709b3d</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>45</displayx>
+    <displayy>-60</displayy>
+    <displaywidth>30</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>db73716f-eb27-44b2-99a9-110d1a874c2d</onsuccess>
+    <groupid>1d8b4277-e944-4ce4-ba4e-1b6bfd34ff63</groupid>
+  </stage>
+  <stage stageid="9d7bee00-f210-4264-8034-e8b8ac123d88" name="XS" type="WaitStart">
+    <subsheetid>71e5e501-5868-4e7e-830d-1aefe3709b3d</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>-15</displayx>
+    <displayy>-60</displayy>
+    <displaywidth>30</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <groupid>1d8b4277-e944-4ce4-ba4e-1b6bfd34ff63</groupid>
+    <choices />
+    <timeout>[XS]</timeout>
+  </stage>
+  <stage stageid="0e81dc49-18b8-43bd-b516-df2be4c3b453" name="Time Out - XS" type="WaitEnd">
+    <subsheetid>71e5e501-5868-4e7e-830d-1aefe3709b3d</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>45</displayx>
+    <displayy>210</displayy>
+    <displaywidth>30</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>d96c911e-2cf7-4751-b59a-c8c74b76d340</onsuccess>
+    <groupid>b46e2519-95f4-4d2c-a22b-c49d3c51e489</groupid>
+  </stage>
+  <stage stageid="b4ee57df-1f2b-40a2-9316-7d27a4368a55" name="XS" type="WaitStart">
+    <subsheetid>71e5e501-5868-4e7e-830d-1aefe3709b3d</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>-15</displayx>
+    <displayy>210</displayy>
+    <displaywidth>30</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <groupid>b46e2519-95f4-4d2c-a22b-c49d3c51e489</groupid>
+    <choices />
+    <timeout>[XS]</timeout>
+  </stage>
+  <stage stageid="19d36f3c-a37d-48f2-908a-86c751099df4" name="Time Out - S" type="WaitEnd">
+    <subsheetid>71e5e501-5868-4e7e-830d-1aefe3709b3d</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>45</displayx>
+    <displayy>300</displayy>
+    <displaywidth>30</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>27987d74-10eb-47b5-b78e-b35b04cd1258</onsuccess>
+    <groupid>828e91ae-190e-45d0-8b83-de24139cde1c</groupid>
+  </stage>
+  <stage stageid="424a34d0-0590-48ea-aafc-4d66897e7e40" name="S" type="WaitStart">
+    <subsheetid>71e5e501-5868-4e7e-830d-1aefe3709b3d</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>-15</displayx>
+    <displayy>300</displayy>
+    <displaywidth>30</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <groupid>828e91ae-190e-45d0-8b83-de24139cde1c</groupid>
+    <choices />
+    <timeout>[S]</timeout>
+  </stage>
+  <stage stageid="d96c911e-2cf7-4751-b59a-c8c74b76d340" name="Send Event" type="Navigate">
+    <subsheetid>71e5e501-5868-4e7e-830d-1aefe3709b3d</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>255</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>424a34d0-0590-48ea-aafc-4d66897e7e40</onsuccess>
+    <step>
+      <element id="f4f7ac8d-9418-4f0a-8891-1c594fb9203b" />
+      <action>
+        <id>SendKeyEvents</id>
+        <arguments>
+          <argument>
+            <id>newtext</id>
+            <value>[Event]</value>
+          </argument>
+        </arguments>
+      </action>
+    </step>
+  </stage>
+  <stage stageid="649d60c2-0c4a-4626-9db4-66cbbb80b8d0" name="Clear by DEL" type="Data">
+    <subsheetid>68526aea-29c1-4d9b-8733-3e362ae07739</subsheetid>
+    <narrative>
+    </narrative>
+    <displayx>-195</displayx>
+    <displayy>210</displayy>
+    <displaywidth>90</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>flag</datatype>
+    <initialvalue>True</initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="5354d97f-a714-471b-8eb6-d7531116661a" name="Clear Backspace" type="Navigate">
+    <subsheetid>68526aea-29c1-4d9b-8733-3e362ae07739</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>60</displayx>
+    <displayy>315</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>f86a8152-22ce-430c-bc23-a70def00dd5b</onsuccess>
+    <step>
+      <element id="f4f7ac8d-9418-4f0a-8891-1c594fb9203b" />
+      <action>
+        <id>SendKeys</id>
+        <arguments>
+          <argument>
+            <id>newtext</id>
+            <value>"{BS 20}"</value>
+          </argument>
+        </arguments>
+      </action>
+    </step>
+  </stage>
+  <stage stageid="b58a4ade-12c9-4b8e-9168-2d9415f5f118" name="DEL?" type="Decision">
+    <subsheetid>68526aea-29c1-4d9b-8733-3e362ae07739</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>255</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <decision expression="[Clear by DEL]" />
+    <ontrue>854e32e1-d1bc-4200-9bfe-285920ad00b9</ontrue>
+    <onfalse>5354d97f-a714-471b-8eb6-d7531116661a</onfalse>
+  </stage>
+  <stage stageid="f86a8152-22ce-430c-bc23-a70def00dd5b" name="Anchor1" type="Anchor">
+    <subsheetid>68526aea-29c1-4d9b-8733-3e362ae07739</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>360</displayy>
+    <displaywidth>10</displaywidth>
+    <displayheight>10</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>62b0fcd4-1454-457d-a5ab-191ceb1348c5</onsuccess>
+  </stage>
+  <stage stageid="c7d47539-1674-4d00-a01d-c08a6c6c25b3" name="XS" type="Data">
+    <loginhibit />
+    <narrative>Small 0.1</narrative>
+    <displayx>120</displayx>
+    <displayy>-135</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>number</datatype>
+    <initialvalue>0.1</initialvalue>
+    <alwaysinit />
+  </stage>
+  <stage stageid="6641a275-22d1-4fc8-9296-8e84ce75d40e" name="SE - Timeout" type="Exception">
+    <subsheetid>97074fb6-0126-47cf-afd4-4431b0c1af25</subsheetid>
+    <narrative>
+    </narrative>
+    <displayx>135</displayx>
+    <displayy>-60</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <exception type="System Exception" detail="&quot;Window not found&quot;" />
+  </stage>
+  <stage stageid="279901b6-45da-40ab-b4d5-cf7dcec2efc4" name="Time Out - XL" type="WaitEnd">
+    <subsheetid>97074fb6-0126-47cf-afd4-4431b0c1af25</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>60</displayx>
+    <displayy>-60</displayy>
+    <displaywidth>30</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>6641a275-22d1-4fc8-9296-8e84ce75d40e</onsuccess>
+    <groupid>e2cf162a-0720-4b95-8bbd-9840804daf19</groupid>
+  </stage>
+  <stage stageid="24d31cb7-b3ee-46b1-8523-7cc529e5d037" name="XL" type="WaitStart">
+    <subsheetid>97074fb6-0126-47cf-afd4-4431b0c1af25</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>-30</displayx>
+    <displayy>-60</displayy>
+    <displaywidth>30</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <groupid>e2cf162a-0720-4b95-8bbd-9840804daf19</groupid>
+    <choices>
+      <choice reply="True">
+        <name>Window - Dynamic Check Exists</name>
+        <distance>45</distance>
+        <ontrue>ae039116-8bf0-4793-95d1-763f9359c408</ontrue>
+        <element id="e950628b-77a2-4515-ac75-09cdb7229cea">
+          <elementparameter>
+            <name>WindowText</name>
+            <expression>[Window Title]</expression>
+            <datatype>text</datatype>
+            <comparisontype>Wildcard</comparisontype>
+          </elementparameter>
+        </element>
+        <condition>
+          <id>CheckExists</id>
+        </condition>
+        <comparetype>Equal</comparetype>
+      </choice>
+    </choices>
+    <timeout>[XL]</timeout>
+  </stage>
+  <stage stageid="a64f13d1-edac-497f-a611-7a731b0070d1" name="SE - Timeout" type="Exception">
+    <subsheetid>a5d50418-42b5-446e-a838-a8fcfeb59117</subsheetid>
+    <narrative>
+    </narrative>
+    <displayx>225</displayx>
+    <displayy>-90</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <exception type="System Exception" detail="&quot;Window not found&quot;" />
+  </stage>
+  <stage stageid="1195765c-0282-44f8-a8dc-37575950db21" name="Time Out - XL" type="WaitEnd">
+    <subsheetid>a5d50418-42b5-446e-a838-a8fcfeb59117</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>150</displayx>
+    <displayy>-90</displayy>
+    <displaywidth>30</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>a64f13d1-edac-497f-a611-7a731b0070d1</onsuccess>
+    <groupid>b144e943-79c9-448a-b379-2b493a960cee</groupid>
+  </stage>
+  <stage stageid="a0f35469-7d7c-44d7-b269-1b087df343e0" name="XL" type="WaitStart">
+    <subsheetid>a5d50418-42b5-446e-a838-a8fcfeb59117</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>60</displayx>
+    <displayy>-90</displayy>
+    <displaywidth>30</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <groupid>b144e943-79c9-448a-b379-2b493a960cee</groupid>
+    <choices>
+      <choice reply="True">
+        <name>Window - Dynamic Check Exists</name>
+        <distance>45</distance>
+        <ontrue>3fe93de1-2159-4a11-9099-8c1d0a09e504</ontrue>
+        <element id="e950628b-77a2-4515-ac75-09cdb7229cea">
+          <elementparameter>
+            <name>WindowText</name>
+            <expression>[Window Title]</expression>
+            <datatype>text</datatype>
+            <comparisontype>Wildcard</comparisontype>
+          </elementparameter>
+        </element>
+        <condition>
+          <id>CheckExists</id>
+        </condition>
+        <comparetype>Equal</comparetype>
+      </choice>
+    </choices>
+    <timeout>[XL]</timeout>
+  </stage>
+  <stage stageid="1a5e7335-ff37-4042-ae46-bdb3e4ba13c2" name="SE - Timeout" type="Exception">
+    <subsheetid>68526aea-29c1-4d9b-8733-3e362ae07739</subsheetid>
+    <narrative>
+    </narrative>
+    <displayx>135</displayx>
+    <displayy>-150</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <exception type="System Exception" detail="&quot;Window not found&quot;" />
+  </stage>
+  <stage stageid="2fc7b17a-5d97-4fb4-be8b-ce932dea00d2" name="Time Out - XL" type="WaitEnd">
+    <subsheetid>68526aea-29c1-4d9b-8733-3e362ae07739</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>60</displayx>
+    <displayy>-150</displayy>
+    <displaywidth>30</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>1a5e7335-ff37-4042-ae46-bdb3e4ba13c2</onsuccess>
+    <groupid>3c623713-31ae-4eda-a259-e8680339aac7</groupid>
+  </stage>
+  <stage stageid="5ff22d6e-2cf9-44cd-8774-bbafec2fb81f" name="XL" type="WaitStart">
+    <subsheetid>68526aea-29c1-4d9b-8733-3e362ae07739</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>-30</displayx>
+    <displayy>-150</displayy>
+    <displaywidth>30</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <groupid>3c623713-31ae-4eda-a259-e8680339aac7</groupid>
+    <choices>
+      <choice reply="True">
+        <name>Window - Dynamic Check Exists</name>
+        <distance>45</distance>
+        <ontrue>5d167af8-e75a-4f6e-b15e-369462fcea1a</ontrue>
+        <element id="e950628b-77a2-4515-ac75-09cdb7229cea">
+          <elementparameter>
+            <name>WindowText</name>
+            <expression>[Window Title]</expression>
+            <datatype>text</datatype>
+            <comparisontype>Wildcard</comparisontype>
+          </elementparameter>
+        </element>
+        <condition>
+          <id>CheckExists</id>
+        </condition>
+        <comparetype>Equal</comparetype>
+      </choice>
+    </choices>
+    <timeout>[XL]</timeout>
+  </stage>
+  <stage stageid="b9757d09-38eb-49d3-b3bc-212c8f783c9d" name="SE - Timeout" type="Exception">
+    <subsheetid>71e5e501-5868-4e7e-830d-1aefe3709b3d</subsheetid>
+    <narrative>
+    </narrative>
+    <displayx>135</displayx>
+    <displayy>-150</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <exception type="System Exception" detail="&quot;Window not found&quot;" />
+  </stage>
+  <stage stageid="98c74ff7-ec97-4c57-b884-e665bc561ee4" name="Time Out - XL" type="WaitEnd">
+    <subsheetid>71e5e501-5868-4e7e-830d-1aefe3709b3d</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>60</displayx>
+    <displayy>-150</displayy>
+    <displaywidth>30</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>b9757d09-38eb-49d3-b3bc-212c8f783c9d</onsuccess>
+    <groupid>8c2f0b52-f041-443e-8349-db91c9143fa8</groupid>
+  </stage>
+  <stage stageid="0c37ca3c-3be1-43a9-9c90-f1e71474cf99" name="XL" type="WaitStart">
+    <subsheetid>71e5e501-5868-4e7e-830d-1aefe3709b3d</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>-30</displayx>
+    <displayy>-150</displayy>
+    <displaywidth>30</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <groupid>8c2f0b52-f041-443e-8349-db91c9143fa8</groupid>
+    <choices>
+      <choice reply="True">
+        <name>Window - Dynamic Check Exists</name>
+        <distance>45</distance>
+        <ontrue>c05c901c-e3ae-4872-961b-45d65c25fe95</ontrue>
+        <element id="e950628b-77a2-4515-ac75-09cdb7229cea">
+          <elementparameter>
+            <name>WindowText</name>
+            <expression>[Window Title]</expression>
+            <datatype>text</datatype>
+            <comparisontype>Wildcard</comparisontype>
+          </elementparameter>
+        </element>
+        <condition>
+          <id>CheckExists</id>
+        </condition>
+        <comparetype>Equal</comparetype>
+      </choice>
+    </choices>
+    <timeout>[XL]</timeout>
+  </stage>
+  <stage stageid="3f2bfec8-6d81-4be0-9b1b-18447e472340" name="Go to Record" type="SubSheetInfo">
+    <subsheetid>172a005a-0166-470f-ba0d-6aa1768aa673</subsheetid>
+    <narrative>Set given row index to the 1st position in the visible sap table</narrative>
+    <displayx>-120</displayx>
+    <displayy>-180</displayy>
+    <displaywidth>150</displaywidth>
+    <displayheight>90</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+  </stage>
+  <stage stageid="847779a6-77dc-4436-b756-9fc70770d262" name="Start" type="Start">
+    <subsheetid>172a005a-0166-470f-ba0d-6aa1768aa673</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>-120</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <inputs>
+      <input type="text" name="Window Title" narrative="Title of current SAP window" stage="Window Title" />
+      <input type="text" name="Table Name" narrative="SAP table ID" stage="Table Name" />
+      <input type="number" name="Record Index" narrative="Index of record to be visible at 1st position" stage="Record Index" />
+      <input type="number" name="Session ID" narrative="Current session ID" stage="Session ID" />
+      <input type="number" name="Connection ID" narrative="Current SAP connection ID" stage="Connection ID" />
+    </inputs>
+    <onsuccess>a3899125-863d-42b1-a363-13950eea313e</onsuccess>
+  </stage>
+  <stage stageid="0052ca3e-1eb9-482a-bb12-420768157a52" name="End" type="End">
+    <subsheetid>172a005a-0166-470f-ba0d-6aa1768aa673</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>60</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+  </stage>
+  <stage stageid="97665be5-9ad7-428c-ac21-2f92a0d376a9" name="Time Out - S" type="WaitEnd">
+    <subsheetid>172a005a-0166-470f-ba0d-6aa1768aa673</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>45</displayx>
+    <displayy>15</displayy>
+    <displaywidth>30</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>0052ca3e-1eb9-482a-bb12-420768157a52</onsuccess>
+    <groupid>e3e35d06-203d-4451-bf11-93875d48465f</groupid>
+  </stage>
+  <stage stageid="d4c9e925-b501-4e86-90c7-0e44479096c5" name="S" type="WaitStart">
+    <subsheetid>172a005a-0166-470f-ba0d-6aa1768aa673</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>-15</displayx>
+    <displayy>15</displayy>
+    <displaywidth>30</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <groupid>e3e35d06-203d-4451-bf11-93875d48465f</groupid>
+    <choices />
+    <timeout>[S]</timeout>
+  </stage>
+  <stage stageid="4815ffac-40d8-426b-894d-cc7642590243" name="SE - Timeout" type="Exception">
+    <subsheetid>172a005a-0166-470f-ba0d-6aa1768aa673</subsheetid>
+    <narrative>
+    </narrative>
+    <displayx>135</displayx>
+    <displayy>-75</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <exception type="System Exception" detail="&quot;Window not found&quot;" />
+  </stage>
+  <stage stageid="bb49a1b4-7f50-4235-a6e0-ccd59b76515e" name="Time Out - XL" type="WaitEnd">
+    <subsheetid>172a005a-0166-470f-ba0d-6aa1768aa673</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>60</displayx>
+    <displayy>-75</displayy>
+    <displaywidth>30</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>4815ffac-40d8-426b-894d-cc7642590243</onsuccess>
+    <groupid>f14cb8df-9ae5-4a12-bd1d-66a6bd31cd0e</groupid>
+  </stage>
+  <stage stageid="a3899125-863d-42b1-a363-13950eea313e" name="XL" type="WaitStart">
+    <subsheetid>172a005a-0166-470f-ba0d-6aa1768aa673</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>-30</displayx>
+    <displayy>-75</displayy>
+    <displaywidth>30</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <groupid>f14cb8df-9ae5-4a12-bd1d-66a6bd31cd0e</groupid>
+    <choices>
+      <choice reply="True">
+        <name>Window - Dynamic Check Exists</name>
+        <distance>45</distance>
+        <ontrue>856affde-4c47-4d39-b210-f61416286c8b</ontrue>
+        <element id="e950628b-77a2-4515-ac75-09cdb7229cea">
+          <elementparameter>
+            <name>WindowText</name>
+            <expression>[Window Title]</expression>
+            <datatype>text</datatype>
+            <comparisontype>Wildcard</comparisontype>
+          </elementparameter>
+        </element>
+        <condition>
+          <id>CheckExists</id>
+        </condition>
+        <comparetype>Equal</comparetype>
+      </choice>
+    </choices>
+    <timeout>[XL]</timeout>
+  </stage>
+  <stage stageid="856affde-4c47-4d39-b210-f61416286c8b" name="Go to Line Script" type="Code">
+    <subsheetid>172a005a-0166-470f-ba0d-6aa1768aa673</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>-30</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <inputs>
+      <input type="number" name="RecordIndex" expr="[Record Index]" />
+      <input type="text" name="TableName" expr="[Table Name]" />
+      <input type="number" name="Session ID" expr="[Session ID]" />
+      <input type="number" name="Connection ID" expr="[Connection ID]" />
+    </inputs>
+    <onsuccess>d4c9e925-b501-4e86-90c7-0e44479096c5</onsuccess>
+    <code><![CDATA[Dim session
+
+session = GetObject("SAPGUI").GetScriptingEngine.Children(cint(Connection_ID)).Children(cint(Session_ID))
+session.findById(TableName).verticalScrollbar.position = RecordIndex]]></code>
+  </stage>
+  <stage stageid="793595ee-335c-4979-81a8-5e7beb370ace" name="Window Title" type="Data">
+    <subsheetid>172a005a-0166-470f-ba0d-6aa1768aa673</subsheetid>
+    <narrative>
+    </narrative>
+    <displayx>-120</displayx>
+    <displayy>-90</displayy>
+    <displaywidth>90</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="9392fbe9-3be6-4cd3-af14-64fdf12cff63" name="Table Name" type="Data">
+    <subsheetid>172a005a-0166-470f-ba0d-6aa1768aa673</subsheetid>
+    <narrative>
+    </narrative>
+    <displayx>-120</displayx>
+    <displayy>-45</displayy>
+    <displaywidth>90</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="78d17ef9-d4a5-414f-ac4b-ec8014746df5" name="Record Index" type="Data">
+    <subsheetid>172a005a-0166-470f-ba0d-6aa1768aa673</subsheetid>
+    <narrative>
+    </narrative>
+    <displayx>-120</displayx>
+    <displayy>0</displayy>
+    <displaywidth>90</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>number</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="8a76b70e-09aa-478f-a8bc-d51fb3cc2112" name="Input" type="Block">
+    <subsheetid>172a005a-0166-470f-ba0d-6aa1768aa673</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>-180</displayx>
+    <displayy>-120</displayy>
+    <displaywidth>120</displaywidth>
+    <displayheight>240</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="7FB2E5" />
+  </stage>
+  <stage stageid="b0c5f9ca-193a-4263-9b0b-27a0f176ec12" name="Set Cell Value" type="SubSheetInfo">
+    <subsheetid>51697230-ac37-4daa-9c83-64630113cddd</subsheetid>
+    <narrative>Setting provided value to the specified cell</narrative>
+    <displayx>-135</displayx>
+    <displayy>-210</displayy>
+    <displaywidth>150</displaywidth>
+    <displayheight>60</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+  </stage>
+  <stage stageid="e83293c1-4f1b-432c-8517-23380b4d4144" name="Start" type="Start">
+    <subsheetid>51697230-ac37-4daa-9c83-64630113cddd</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>-195</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <inputs>
+      <input type="text" name="Window Title" narrative="SAP window title" stage="Window Title" />
+      <input type="text" name="New Cell Value" narrative="New cell value to be set" stage="New Cell Value" />
+      <input type="text" name="Cell Address" narrative="ID cell to be set" stage="Cell Address" />
+      <input type="number" name="Session ID" narrative="Current session ID" stage="Session ID" />
+      <input type="number" name="Connection ID" narrative="Current SAP connection ID" stage="Connection ID" />
+    </inputs>
+    <onsuccess>351c927a-6c23-4314-ad96-228807b089f3</onsuccess>
+  </stage>
+  <stage stageid="ccf9919b-1134-492d-aa0f-48d757ec246b" name="End" type="End">
+    <subsheetid>51697230-ac37-4daa-9c83-64630113cddd</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>-15</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+  </stage>
+  <stage stageid="2734e3ac-6f65-4c56-a2c2-36de606fdb1c" name="Window Title" type="Data">
+    <subsheetid>51697230-ac37-4daa-9c83-64630113cddd</subsheetid>
+    <narrative>
+    </narrative>
+    <displayx>-135</displayx>
+    <displayy>-90</displayy>
+    <displaywidth>90</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="1fc52c33-55de-4ae4-8734-eb4423183610" name="Input" type="Block">
+    <subsheetid>51697230-ac37-4daa-9c83-64630113cddd</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>-195</displayx>
+    <displayy>-165</displayy>
+    <displaywidth>120</displaywidth>
+    <displayheight>240</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="7FB2E5" />
+  </stage>
+  <stage stageid="242aa1a9-5b08-4027-8a1c-f5f31245b45e" name="Cell Address" type="Data">
+    <subsheetid>51697230-ac37-4daa-9c83-64630113cddd</subsheetid>
+    <narrative>
+    </narrative>
+    <displayx>-135</displayx>
+    <displayy>-45</displayy>
+    <displaywidth>90</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="153185cc-ecb2-47e5-b682-59ba9d69a7ca" name="New Cell Value" type="Data">
+    <subsheetid>51697230-ac37-4daa-9c83-64630113cddd</subsheetid>
+    <narrative>
+    </narrative>
+    <displayx>-135</displayx>
+    <displayy>-135</displayy>
+    <displaywidth>90</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="e689c682-ac03-4e53-80a0-b8b156849e96" name="Time Out - XS" type="WaitEnd">
+    <subsheetid>51697230-ac37-4daa-9c83-64630113cddd</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>45</displayx>
+    <displayy>-60</displayy>
+    <displaywidth>30</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>ccf9919b-1134-492d-aa0f-48d757ec246b</onsuccess>
+    <groupid>5d383927-c7ea-4fe2-81b3-f390c307642b</groupid>
+  </stage>
+  <stage stageid="857db9ec-8eac-4787-9c83-19128b8d1532" name="XS" type="WaitStart">
+    <subsheetid>51697230-ac37-4daa-9c83-64630113cddd</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>-15</displayx>
+    <displayy>-60</displayy>
+    <displaywidth>30</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <groupid>5d383927-c7ea-4fe2-81b3-f390c307642b</groupid>
+    <choices />
+    <timeout>[XS]</timeout>
+  </stage>
+  <stage stageid="f25d6d34-25f4-43b1-be55-09e964c2f25c" name="SE - Timeout" type="Exception">
+    <subsheetid>51697230-ac37-4daa-9c83-64630113cddd</subsheetid>
+    <narrative>
+    </narrative>
+    <displayx>135</displayx>
+    <displayy>-150</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <exception type="System Exception" detail="&quot;Window not found&quot;" />
+  </stage>
+  <stage stageid="e5277718-a794-4131-875c-b58e173f798f" name="Time Out - XL" type="WaitEnd">
+    <subsheetid>51697230-ac37-4daa-9c83-64630113cddd</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>60</displayx>
+    <displayy>-150</displayy>
+    <displaywidth>30</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>f25d6d34-25f4-43b1-be55-09e964c2f25c</onsuccess>
+    <groupid>b22b7f12-a6b4-4917-b311-487b2ea98f74</groupid>
+  </stage>
+  <stage stageid="351c927a-6c23-4314-ad96-228807b089f3" name="XL" type="WaitStart">
+    <subsheetid>51697230-ac37-4daa-9c83-64630113cddd</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>-30</displayx>
+    <displayy>-150</displayy>
+    <displaywidth>30</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <groupid>b22b7f12-a6b4-4917-b311-487b2ea98f74</groupid>
+    <choices>
+      <choice reply="True">
+        <name>Window - Dynamic Check Exists</name>
+        <distance>45</distance>
+        <ontrue>aa3566b9-24a3-47c2-84b2-cc397fda80f0</ontrue>
+        <element id="e950628b-77a2-4515-ac75-09cdb7229cea">
+          <elementparameter>
+            <name>WindowText</name>
+            <expression>[Window Title]</expression>
+            <datatype>text</datatype>
+            <comparisontype>Wildcard</comparisontype>
+          </elementparameter>
+        </element>
+        <condition>
+          <id>CheckExists</id>
+        </condition>
+        <comparetype>Equal</comparetype>
+      </choice>
+    </choices>
+    <timeout>[XL]</timeout>
+  </stage>
+  <stage stageid="aa3566b9-24a3-47c2-84b2-cc397fda80f0" name="Set Text" type="Code">
+    <subsheetid>51697230-ac37-4daa-9c83-64630113cddd</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>-105</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <inputs>
+      <input type="text" name="CellAddress" expr="[Cell Address]" />
+      <input type="text" name="NewText" expr="[New Cell Value]" />
+      <input type="number" name="Session ID" expr="[Session ID]" />
+      <input type="number" name="Connection ID" expr="[Connection ID]" />
+    </inputs>
+    <onsuccess>857db9ec-8eac-4787-9c83-19128b8d1532</onsuccess>
+    <code><![CDATA[Dim session
+
+session = GetObject("SAPGUI").GetScriptingEngine.Children(Cint(Connection_ID)).Children(Cint(Session_ID))
+session.findById(CellAddress).text = NewText]]></code>
+  </stage>
+  <stage stageid="813ba591-e15e-432e-9eb4-1c700fec144d" name="Set Cell Value" type="SubSheetInfo">
+    <subsheetid>336788eb-b8dd-4fde-b53e-ac7cae1a0b3b</subsheetid>
+    <narrative>Setting provided value to the specified cell</narrative>
+    <displayx>-135</displayx>
+    <displayy>-210</displayy>
+    <displaywidth>150</displaywidth>
+    <displayheight>60</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+  </stage>
+  <stage stageid="7b16fa2c-2c56-48e6-bd75-1d92858e854c" name="Start" type="Start">
+    <subsheetid>336788eb-b8dd-4fde-b53e-ac7cae1a0b3b</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>-195</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <inputs>
+      <input type="text" name="Window Title" narrative="SAP window title" stage="Window Title" />
+      <input type="text" name="Table Name" narrative="Table SAP Adress" stage="Table Name" />
+      <input type="number" name="Row Index" narrative="Row Index in SAP Table" stage="Row Index" />
+      <input type="text" name="Column Name" narrative="Column SAP Name" stage="Column Name" />
+      <input type="number" name="Min Column" narrative="Minimum column index to be tested" stage="Min Column Index" />
+      <input type="number" name="Max Column" narrative="Maximum column index to be tested" stage="Max Column Index" />
+    </inputs>
+    <onsuccess>51154929-d1be-42de-aaee-72ac42fe0260</onsuccess>
+  </stage>
+  <stage stageid="67c951ab-d3ad-4f89-8a72-6e808a9fb856" name="End" type="End">
+    <subsheetid>336788eb-b8dd-4fde-b53e-ac7cae1a0b3b</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>120</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <outputs>
+      <output type="number" name="Column Index" narrative="Given column index" stage="Column Index" />
+    </outputs>
+  </stage>
+  <stage stageid="97c618e7-47f1-4f5b-860c-43e7cebcfadc" name="Window Title" type="Data">
+    <subsheetid>336788eb-b8dd-4fde-b53e-ac7cae1a0b3b</subsheetid>
+    <narrative>
+    </narrative>
+    <displayx>-180</displayx>
+    <displayy>-135</displayy>
+    <displaywidth>90</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="47655ae0-ccbe-4c2a-88b3-aa18a441e11b" name="Input" type="Block">
+    <subsheetid>336788eb-b8dd-4fde-b53e-ac7cae1a0b3b</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>-240</displayx>
+    <displayy>-165</displayy>
+    <displaywidth>120</displaywidth>
+    <displayheight>375</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="7FB2E5" />
+  </stage>
+  <stage stageid="443b06b3-8aaf-4bf8-8a22-b81e429057d7" name="Output" type="Block">
+    <subsheetid>336788eb-b8dd-4fde-b53e-ac7cae1a0b3b</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>-240</displayx>
+    <displayy>225</displayy>
+    <displaywidth>120</displaywidth>
+    <displayheight>60</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="7FB2E5" />
+  </stage>
+  <stage stageid="2fe90f88-b3a2-4d13-9f83-8187b7ab0d6c" name="Table Name" type="Data">
+    <subsheetid>336788eb-b8dd-4fde-b53e-ac7cae1a0b3b</subsheetid>
+    <narrative>
+    </narrative>
+    <displayx>-180</displayx>
+    <displayy>-90</displayy>
+    <displaywidth>90</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="e2c1cf8a-5551-41c4-9b42-a800e50d8fab" name="Row Index" type="Data">
+    <subsheetid>336788eb-b8dd-4fde-b53e-ac7cae1a0b3b</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>-180</displayx>
+    <displayy>-45</displayy>
+    <displaywidth>90</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>number</datatype>
+    <initialvalue>0</initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="b85e902f-8960-4e4e-9e3b-d6899cb40fa5" name="Column Name" type="Data">
+    <subsheetid>336788eb-b8dd-4fde-b53e-ac7cae1a0b3b</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>-180</displayx>
+    <displayy>0</displayy>
+    <displaywidth>90</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="11fc57b3-7464-4fff-9ff4-b136293a8d5c" name="Column Index" type="Data">
+    <subsheetid>336788eb-b8dd-4fde-b53e-ac7cae1a0b3b</subsheetid>
+    <narrative>
+    </narrative>
+    <displayx>-180</displayx>
+    <displayy>255</displayy>
+    <displaywidth>90</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>number</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="538835fd-1384-41a8-b287-e4c93de58bf1" name="Calc Cell Address" type="Calculation">
+    <subsheetid>336788eb-b8dd-4fde-b53e-ac7cae1a0b3b</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>-15</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>e3eb6c35-924c-4167-8628-0a6eeb8ecd14</onsuccess>
+    <calculation expression="[Table Name] &amp; &quot;/&quot; &amp; [Column Name] &amp; &quot;[&quot; &amp; [Column Index]  &amp; &quot;,&quot; &amp; [Row Index] &amp; &quot;]&quot;" stage="Cell Address" />
+  </stage>
+  <stage stageid="ca4b731c-e3f7-4354-9f2b-d86e6ae26171" name="Next Column Index" type="Calculation">
+    <subsheetid>336788eb-b8dd-4fde-b53e-ac7cae1a0b3b</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>105</displayx>
+    <displayy>-60</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>41c577b7-84e7-4d72-a476-b67ba857f0ae</onsuccess>
+    <calculation expression="[Column Index]+1" stage="Column Index" />
+  </stage>
+  <stage stageid="ef546c0e-1378-4802-bbef-55d0fd87d9ec" name="Min Column Index" type="Data">
+    <subsheetid>336788eb-b8dd-4fde-b53e-ac7cae1a0b3b</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>-180</displayx>
+    <displayy>45</displayy>
+    <displaywidth>90</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>number</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="94ba58a1-4bd7-4f68-89a3-c4b8119da181" name="Max Column Index" type="Data">
+    <subsheetid>336788eb-b8dd-4fde-b53e-ac7cae1a0b3b</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>-180</displayx>
+    <displayy>90</displayy>
+    <displaywidth>90</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>number</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="004578a5-3c27-4d8c-a6a5-0093876d95b4" name="Start Column Index" type="Calculation">
+    <subsheetid>336788eb-b8dd-4fde-b53e-ac7cae1a0b3b</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>-105</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>41c577b7-84e7-4d72-a476-b67ba857f0ae</onsuccess>
+    <calculation expression="[Min Column Index]" stage="Column Index" />
+  </stage>
+  <stage stageid="41c577b7-84e7-4d72-a476-b67ba857f0ae" name="Limit Exceeded?" type="Decision">
+    <subsheetid>336788eb-b8dd-4fde-b53e-ac7cae1a0b3b</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>-60</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <decision expression="[Max Column Index]&lt;[Column Index]" />
+    <ontrue>f83774df-3541-4ba7-9d86-33284f6d69a0</ontrue>
+    <onfalse>538835fd-1384-41a8-b287-e4c93de58bf1</onfalse>
+  </stage>
+  <stage stageid="f83774df-3541-4ba7-9d86-33284f6d69a0" name="SE - Column Not Found" type="Exception">
+    <subsheetid>336788eb-b8dd-4fde-b53e-ac7cae1a0b3b</subsheetid>
+    <narrative>
+    </narrative>
+    <displayx>-75</displayx>
+    <displayy>-60</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <exception type="System Exception" detail="&quot;Provided column name has not been found&quot;" />
+  </stage>
+  <stage stageid="dde477fc-8edb-4c8c-a4ef-0e648bb6d7a3" name="SE - Timeout" type="Exception">
+    <subsheetid>336788eb-b8dd-4fde-b53e-ac7cae1a0b3b</subsheetid>
+    <narrative>
+    </narrative>
+    <displayx>135</displayx>
+    <displayy>-150</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <exception type="System Exception" detail="&quot;Window not found&quot;" />
+  </stage>
+  <stage stageid="0853a1ac-9735-4ada-bd04-64d9303c42c7" name="Time Out - XL" type="WaitEnd">
+    <subsheetid>336788eb-b8dd-4fde-b53e-ac7cae1a0b3b</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>60</displayx>
+    <displayy>-150</displayy>
+    <displaywidth>30</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>dde477fc-8edb-4c8c-a4ef-0e648bb6d7a3</onsuccess>
+    <groupid>a59bd198-08a0-47fe-a7e6-780e29761962</groupid>
+  </stage>
+  <stage stageid="51154929-d1be-42de-aaee-72ac42fe0260" name="XL" type="WaitStart">
+    <subsheetid>336788eb-b8dd-4fde-b53e-ac7cae1a0b3b</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>-30</displayx>
+    <displayy>-150</displayy>
+    <displaywidth>30</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <groupid>a59bd198-08a0-47fe-a7e6-780e29761962</groupid>
+    <choices>
+      <choice reply="True">
+        <name>Window - Dynamic Check Exists</name>
+        <distance>45</distance>
+        <ontrue>004578a5-3c27-4d8c-a6a5-0093876d95b4</ontrue>
+        <element id="e950628b-77a2-4515-ac75-09cdb7229cea">
+          <elementparameter>
+            <name>WindowText</name>
+            <expression>[Window Title]</expression>
+            <datatype>text</datatype>
+            <comparisontype>Wildcard</comparisontype>
+          </elementparameter>
+        </element>
+        <condition>
+          <id>CheckExists</id>
+        </condition>
+        <comparetype>Equal</comparetype>
+      </choice>
+    </choices>
+    <timeout>[XL]</timeout>
+  </stage>
+  <stage stageid="a953cd13-5c50-4b95-b86b-2ab7a58fd35c" name="Cell Address" type="Data">
+    <subsheetid>336788eb-b8dd-4fde-b53e-ac7cae1a0b3b</subsheetid>
+    <narrative>
+    </narrative>
+    <displayx>-75</displayx>
+    <displayy>-15</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="773f8657-6a21-403b-a8fb-8735bf272e70" name="Get Cell Value" type="SubSheetInfo">
+    <subsheetid>fc352cb3-c8ef-4d37-aa24-e8b1361a5cc5</subsheetid>
+    <narrative>Reading cell value</narrative>
+    <displayx>-150</displayx>
+    <displayy>-135</displayy>
+    <displaywidth>150</displaywidth>
+    <displayheight>60</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+  </stage>
+  <stage stageid="6c70a039-c1cd-4a6f-81cf-0363dad6ea0a" name="Start" type="Start">
+    <subsheetid>fc352cb3-c8ef-4d37-aa24-e8b1361a5cc5</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>-105</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <inputs>
+      <input type="text" name="Window Title" narrative="SAP window title" stage="Window Title" />
+      <input type="text" name="Cell Address" narrative="Cell ID" stage="Cell Address" />
+      <input type="number" name="Session ID" narrative="Current session ID" stage="Session ID" />
+      <input type="number" name="ConnectionID" narrative="Current SAP connection ID" stage="Connection ID" />
+    </inputs>
+    <onsuccess>93269279-3ac2-4588-a6df-5f652cb28bc7</onsuccess>
+  </stage>
+  <stage stageid="f4651763-70d7-40b9-ba46-bc6e4d540967" name="End" type="End">
+    <subsheetid>fc352cb3-c8ef-4d37-aa24-e8b1361a5cc5</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>45</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <outputs>
+      <output type="text" name="Cell Value" narrative="Specified cell value" stage="Cell Value" />
+    </outputs>
+  </stage>
+  <stage stageid="d0c398d4-d618-43ae-a23c-8973ccde10f3" name="Window Title" type="Data">
+    <subsheetid>fc352cb3-c8ef-4d37-aa24-e8b1361a5cc5</subsheetid>
+    <narrative>
+    </narrative>
+    <displayx>-180</displayx>
+    <displayy>-60</displayy>
+    <displaywidth>90</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="d4d9438b-b73a-4f13-bf9f-521f93fc08ec" name="Input" type="Block">
+    <subsheetid>fc352cb3-c8ef-4d37-aa24-e8b1361a5cc5</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>-240</displayx>
+    <displayy>-90</displayy>
+    <displaywidth>120</displaywidth>
+    <displayheight>195</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="7FB2E5" />
+  </stage>
+  <stage stageid="e25f21b4-8b73-4f12-9d29-4931997eecfc" name="Cell Value" type="Data">
+    <subsheetid>fc352cb3-c8ef-4d37-aa24-e8b1361a5cc5</subsheetid>
+    <narrative>
+    </narrative>
+    <displayx>-180</displayx>
+    <displayy>150</displayy>
+    <displaywidth>90</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="6495e2df-e2ed-42fa-9abd-233ff14abcc8" name="Output" type="Block">
+    <subsheetid>fc352cb3-c8ef-4d37-aa24-e8b1361a5cc5</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>-240</displayx>
+    <displayy>120</displayy>
+    <displaywidth>120</displaywidth>
+    <displayheight>60</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="7FB2E5" />
+  </stage>
+  <stage stageid="ab66f5b3-0a3d-4d0b-b0e1-f6deda608cc8" name="Cell Address" type="Data">
+    <subsheetid>fc352cb3-c8ef-4d37-aa24-e8b1361a5cc5</subsheetid>
+    <narrative>
+    </narrative>
+    <displayx>-180</displayx>
+    <displayy>-15</displayy>
+    <displaywidth>90</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="85196f13-843e-4c6f-b1f3-c78b66e1b0a9" name="SE - Timeout" type="Exception">
+    <subsheetid>fc352cb3-c8ef-4d37-aa24-e8b1361a5cc5</subsheetid>
+    <narrative>
+    </narrative>
+    <displayx>135</displayx>
+    <displayy>-60</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <exception type="System Exception" detail="&quot;Window not found&quot;" />
+  </stage>
+  <stage stageid="e46c321a-33d8-4249-9bbb-c955487566de" name="Time Out - XL" type="WaitEnd">
+    <subsheetid>fc352cb3-c8ef-4d37-aa24-e8b1361a5cc5</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>60</displayx>
+    <displayy>-60</displayy>
+    <displaywidth>30</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>85196f13-843e-4c6f-b1f3-c78b66e1b0a9</onsuccess>
+    <groupid>7d152c6a-f7ba-415c-8452-6a94e1db0781</groupid>
+  </stage>
+  <stage stageid="93269279-3ac2-4588-a6df-5f652cb28bc7" name="XL" type="WaitStart">
+    <subsheetid>fc352cb3-c8ef-4d37-aa24-e8b1361a5cc5</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>-30</displayx>
+    <displayy>-60</displayy>
+    <displaywidth>30</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <groupid>7d152c6a-f7ba-415c-8452-6a94e1db0781</groupid>
+    <choices>
+      <choice reply="True">
+        <name>Window - Dynamic Check Exists</name>
+        <distance>45</distance>
+        <ontrue>3bd44369-0f40-4c79-a89c-e30d322049ed</ontrue>
+        <element id="e950628b-77a2-4515-ac75-09cdb7229cea">
+          <elementparameter>
+            <name>WindowText</name>
+            <expression>[Window Title]</expression>
+            <datatype>text</datatype>
+            <comparisontype>Wildcard</comparisontype>
+          </elementparameter>
+        </element>
+        <condition>
+          <id>CheckExists</id>
+        </condition>
+        <comparetype>Equal</comparetype>
+      </choice>
+    </choices>
+    <timeout>[XL]</timeout>
+  </stage>
+  <stage stageid="3bd44369-0f40-4c79-a89c-e30d322049ed" name="Get Text" type="Code">
+    <subsheetid>fc352cb3-c8ef-4d37-aa24-e8b1361a5cc5</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>-15</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <inputs>
+      <input type="text" name="CellAddress" expr="[Cell Address]" />
+      <input type="number" name="Session ID" expr="[Session ID]" />
+      <input type="number" name="Connection ID" expr="[Connection ID]" />
+    </inputs>
+    <outputs>
+      <output type="text" name="Text" stage="Cell Value" />
+    </outputs>
+    <onsuccess>f4651763-70d7-40b9-ba46-bc6e4d540967</onsuccess>
+    <code><![CDATA[Dim session
+
+session = GetObject("SAPGUI").GetScriptingEngine.Children(Cint(Connection_ID)).Children(Cint(Session_ID))
+Text = session.findById(CellAddress).text]]></code>
+  </stage>
+  <stage stageid="21a1456b-c641-41bb-8ecd-c00ca7685a33" name="Session ID" type="Data">
+    <subsheetid>fc352cb3-c8ef-4d37-aa24-e8b1361a5cc5</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>-180</displayx>
+    <displayy>30</displayy>
+    <displaywidth>90</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>number</datatype>
+    <initialvalue>0</initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="6b0307d4-acbe-4f88-9b33-1007937355c0" name="Session ID" type="Data">
+    <subsheetid>51697230-ac37-4daa-9c83-64630113cddd</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>-135</displayx>
+    <displayy>0</displayy>
+    <displaywidth>90</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>number</datatype>
+    <initialvalue>0</initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="b440d460-c5a0-40ab-8e97-98f7a8f99612" name="Session ID" type="Data">
+    <subsheetid>172a005a-0166-470f-ba0d-6aa1768aa673</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>-120</displayx>
+    <displayy>45</displayy>
+    <displaywidth>90</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>number</datatype>
+    <initialvalue>0</initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="b5e97e2d-089f-44c4-925e-7b6d5ab0b020" name="Connection ID" type="Data">
+    <subsheetid>fc352cb3-c8ef-4d37-aa24-e8b1361a5cc5</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>-180</displayx>
+    <displayy>75</displayy>
+    <displaywidth>90</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>number</datatype>
+    <initialvalue>0</initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="9ae2a900-7c3d-4fe5-b66d-d7979f2b94d3" name="Connection ID" type="Data">
+    <subsheetid>51697230-ac37-4daa-9c83-64630113cddd</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>-135</displayx>
+    <displayy>45</displayy>
+    <displaywidth>90</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>number</datatype>
+    <initialvalue>0</initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="18a7fdb9-95dd-494c-80cb-7a59cbe39597" name="Connection ID" type="Data">
+    <subsheetid>172a005a-0166-470f-ba0d-6aa1768aa673</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>-120</displayx>
+    <displayy>90</displayy>
+    <displaywidth>90</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>number</datatype>
+    <initialvalue>0</initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="3fe93de1-2159-4a11-9099-8c1d0a09e504" name="Choose" type="Code">
+    <subsheetid>a5d50418-42b5-446e-a838-a8fcfeb59117</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>105</displayx>
+    <displayy>-45</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <inputs>
+      <input type="text" name="CellAddress" expr="[Cell Address]" />
+      <input type="number" name="Session ID" expr="[Session ID]" />
+      <input type="number" name="Connection ID" expr="[Connection ID]" />
+    </inputs>
+    <onsuccess>02759775-50fc-457a-9ebc-0775f0231b87</onsuccess>
+    <code><![CDATA[Dim session
+
+session = GetObject("SAPGUI").GetScriptingEngine.Children(Cint(Connection_ID)).Children(Cint(Session_ID))
+session.findById(CellAddress).setFocus
+session.findById("wnd[0]").sendVKey(2)]]></code>
+  </stage>
+  <stage stageid="267c24cf-2230-426b-b8f3-9f237c265a0b" name="Session ID" type="Data">
+    <subsheetid>a5d50418-42b5-446e-a838-a8fcfeb59117</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>-30</displayx>
+    <displayy>0</displayy>
+    <displaywidth>90</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>number</datatype>
+    <initialvalue>0</initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="8273ccfc-24ae-4e23-8740-e47aa5f0ce3d" name="Connection ID" type="Data">
+    <subsheetid>a5d50418-42b5-446e-a838-a8fcfeb59117</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>-30</displayx>
+    <displayy>45</displayy>
+    <displaywidth>90</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>number</datatype>
+    <initialvalue>0</initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="e8d9e5f9-0add-49ca-b034-5b9cd981d852" name="Session ID" type="Data">
+    <subsheetid>336788eb-b8dd-4fde-b53e-ac7cae1a0b3b</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>-180</displayx>
+    <displayy>135</displayy>
+    <displaywidth>90</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>number</datatype>
+    <initialvalue>0</initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="c9416b13-c8b9-470f-8f3f-8ea5ae027a89" name="Connection ID" type="Data">
+    <subsheetid>336788eb-b8dd-4fde-b53e-ac7cae1a0b3b</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>-180</displayx>
+    <displayy>180</displayy>
+    <displaywidth>90</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>number</datatype>
+    <initialvalue>0</initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="e3eb6c35-924c-4167-8628-0a6eeb8ecd14" name="Test" type="Code">
+    <subsheetid>336788eb-b8dd-4fde-b53e-ac7cae1a0b3b</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>30</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <inputs>
+      <input type="text" name="CellAddress" expr="[Cell Address]" />
+      <input type="number" name="Session ID" expr="[Session ID]" />
+      <input type="number" name="Connection ID" expr="[Connection ID]" />
+    </inputs>
+    <outputs>
+      <output type="text" name="Result" stage="Result" />
+    </outputs>
+    <onsuccess>4eab93e3-5740-49cf-93e0-2b0c2193f1e7</onsuccess>
+    <code><![CDATA[Dim session
+
+session = GetObject("SAPGUI").GetScriptingEngine.Children(Cint(Connection_ID)).Children(Cint(Session_ID))
+try
+Result = session.findById(CellAddress).text
+catch
+Result = "Error"
+end try]]></code>
+  </stage>
+  <stage stageid="d3823e82-8597-4a44-84c4-2adc5f3082ad" name="Result" type="Data">
+    <subsheetid>336788eb-b8dd-4fde-b53e-ac7cae1a0b3b</subsheetid>
+    <narrative>
+    </narrative>
+    <displayx>180</displayx>
+    <displayy>75</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="4eab93e3-5740-49cf-93e0-2b0c2193f1e7" name="Error?" type="Decision">
+    <subsheetid>336788eb-b8dd-4fde-b53e-ac7cae1a0b3b</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>75</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <decision expression="[Result] = &quot;Error&quot;" />
+    <ontrue>b41134cc-014a-4724-84d6-6e257abf8a12</ontrue>
+    <onfalse>67c951ab-d3ad-4f89-8a72-6e808a9fb856</onfalse>
+  </stage>
+  <stage stageid="b41134cc-014a-4724-84d6-6e257abf8a12" name="Anchor2" type="Anchor">
+    <subsheetid>336788eb-b8dd-4fde-b53e-ac7cae1a0b3b</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>105</displayx>
+    <displayy>75</displayy>
+    <displaywidth>10</displaywidth>
+    <displayheight>10</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>ca4b731c-e3f7-4354-9f2b-d86e6ae26171</onsuccess>
+  </stage>
+  <stage stageid="4937bc92-a39e-4db2-926e-6b49af29b064" name="Select Row" type="SubSheetInfo">
+    <subsheetid>2909cd06-db30-453d-9d9c-e8ddd2f09a7a</subsheetid>
+    <narrative>Select row by given record index</narrative>
+    <displayx>-120</displayx>
+    <displayy>-180</displayy>
+    <displaywidth>150</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+  </stage>
+  <stage stageid="b4983b12-581c-4a1b-b344-ad11ad45577b" name="Start" type="Start">
+    <subsheetid>2909cd06-db30-453d-9d9c-e8ddd2f09a7a</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>-120</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <inputs>
+      <input type="text" name="Window Title" narrative="Title of current SAP window" stage="Window Title" />
+      <input type="text" name="Table Name" narrative="SAP table ID" stage="Table Name" />
+      <input type="number" name="Record Index" narrative="Index of record to be selected" stage="Record Index" />
+      <input type="number" name="Session ID" narrative="Current session ID" stage="Session ID" />
+      <input type="number" name="Connection ID" narrative="Current SAP connection ID" stage="Connection ID" />
+    </inputs>
+    <onsuccess>3722eade-fa1a-483e-9659-bd21714c2ca7</onsuccess>
+  </stage>
+  <stage stageid="05f1b218-de46-4ac4-bc58-fad2065ae9dc" name="End" type="End">
+    <subsheetid>2909cd06-db30-453d-9d9c-e8ddd2f09a7a</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>60</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+  </stage>
+  <stage stageid="3d0a0092-f42f-4c6d-95ef-914743074301" name="Time Out - S" type="WaitEnd">
+    <subsheetid>2909cd06-db30-453d-9d9c-e8ddd2f09a7a</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>45</displayx>
+    <displayy>15</displayy>
+    <displaywidth>30</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>05f1b218-de46-4ac4-bc58-fad2065ae9dc</onsuccess>
+    <groupid>966a7a31-595f-4d0a-a4f7-c8bd1a3ec5b3</groupid>
+  </stage>
+  <stage stageid="67268308-7610-45bd-86a1-1d304e16807e" name="S" type="WaitStart">
+    <subsheetid>2909cd06-db30-453d-9d9c-e8ddd2f09a7a</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>-15</displayx>
+    <displayy>15</displayy>
+    <displaywidth>30</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <groupid>966a7a31-595f-4d0a-a4f7-c8bd1a3ec5b3</groupid>
+    <choices />
+    <timeout>[S]</timeout>
+  </stage>
+  <stage stageid="eed2a709-c7d3-4ebf-86dc-0630c6468001" name="SE - Timeout" type="Exception">
+    <subsheetid>2909cd06-db30-453d-9d9c-e8ddd2f09a7a</subsheetid>
+    <narrative>
+    </narrative>
+    <displayx>135</displayx>
+    <displayy>-75</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <exception type="System Exception" detail="&quot;Window not found&quot;" />
+  </stage>
+  <stage stageid="c4597324-0668-4c8a-aa0f-4acf1b41313c" name="Time Out - XL" type="WaitEnd">
+    <subsheetid>2909cd06-db30-453d-9d9c-e8ddd2f09a7a</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>60</displayx>
+    <displayy>-75</displayy>
+    <displaywidth>30</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>eed2a709-c7d3-4ebf-86dc-0630c6468001</onsuccess>
+    <groupid>ab44a404-edd1-4683-956f-2333cd7a170b</groupid>
+  </stage>
+  <stage stageid="3722eade-fa1a-483e-9659-bd21714c2ca7" name="XL" type="WaitStart">
+    <subsheetid>2909cd06-db30-453d-9d9c-e8ddd2f09a7a</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>-30</displayx>
+    <displayy>-75</displayy>
+    <displaywidth>30</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <groupid>ab44a404-edd1-4683-956f-2333cd7a170b</groupid>
+    <choices>
+      <choice reply="True">
+        <name>Window - Dynamic Check Exists</name>
+        <distance>45</distance>
+        <ontrue>633d58d4-6eeb-4a8b-9d47-7b434596eb52</ontrue>
+        <element id="e950628b-77a2-4515-ac75-09cdb7229cea">
+          <elementparameter>
+            <name>WindowText</name>
+            <expression>[Window Title]</expression>
+            <datatype>text</datatype>
+            <comparisontype>Wildcard</comparisontype>
+          </elementparameter>
+        </element>
+        <condition>
+          <id>CheckExists</id>
+        </condition>
+        <comparetype>Equal</comparetype>
+      </choice>
+    </choices>
+    <timeout>[XL]</timeout>
+  </stage>
+  <stage stageid="633d58d4-6eeb-4a8b-9d47-7b434596eb52" name="Select Row" type="Code">
+    <subsheetid>2909cd06-db30-453d-9d9c-e8ddd2f09a7a</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>-30</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <inputs>
+      <input type="number" name="RecordIndex" expr="[Record Index]" />
+      <input type="text" name="TableName" expr="[Table Name]" />
+      <input type="number" name="Session ID" expr="[Session ID]" />
+      <input type="number" name="Connection ID" expr="[Connection ID]" />
+    </inputs>
+    <onsuccess>67268308-7610-45bd-86a1-1d304e16807e</onsuccess>
+    <code><![CDATA[Dim session
+
+session = GetObject("SAPGUI").GetScriptingEngine.Children(cint(Connection_ID)).Children(cint(Session_ID))
+
+Try
+
+	session.findById(TableName).selectedRows = cint(RecordIndex)
+
+catch
+
+	session.findById(TableName).getAbsoluteRow(RecordIndex).selected = true
+
+End Try]]></code>
+  </stage>
+  <stage stageid="7d78c4e9-6afb-4da1-b0f3-85fc0c050ed6" name="Window Title" type="Data">
+    <subsheetid>2909cd06-db30-453d-9d9c-e8ddd2f09a7a</subsheetid>
+    <narrative>
+    </narrative>
+    <displayx>-120</displayx>
+    <displayy>-90</displayy>
+    <displaywidth>90</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="4f3f3955-65cf-4eb4-98fa-6f8182712843" name="Table Name" type="Data">
+    <subsheetid>2909cd06-db30-453d-9d9c-e8ddd2f09a7a</subsheetid>
+    <narrative>
+    </narrative>
+    <displayx>-120</displayx>
+    <displayy>-45</displayy>
+    <displaywidth>90</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="52b5cd21-1e3e-4fe6-bc32-3d2257ae3645" name="Record Index" type="Data">
+    <subsheetid>2909cd06-db30-453d-9d9c-e8ddd2f09a7a</subsheetid>
+    <narrative>
+    </narrative>
+    <displayx>-120</displayx>
+    <displayy>0</displayy>
+    <displaywidth>90</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>number</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="058eb7aa-7061-4488-a668-188966a93054" name="Input" type="Block">
+    <subsheetid>2909cd06-db30-453d-9d9c-e8ddd2f09a7a</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>-180</displayx>
+    <displayy>-120</displayy>
+    <displaywidth>120</displaywidth>
+    <displayheight>240</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="7FB2E5" />
+  </stage>
+  <stage stageid="0cd6f611-bed1-4546-b304-818030c0b12d" name="Session ID" type="Data">
+    <subsheetid>2909cd06-db30-453d-9d9c-e8ddd2f09a7a</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>-120</displayx>
+    <displayy>45</displayy>
+    <displaywidth>90</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>number</datatype>
+    <initialvalue>0</initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="9fefc575-a201-4562-aac9-2b7862135451" name="Connection ID" type="Data">
+    <subsheetid>2909cd06-db30-453d-9d9c-e8ddd2f09a7a</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>-120</displayx>
+    <displayy>90</displayy>
+    <displaywidth>90</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>number</datatype>
+    <initialvalue>0</initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="e7e9cb3a-cd00-4171-9def-fa9c2f36000a" name="Unselect All Rows" type="SubSheetInfo">
+    <subsheetid>01cea745-f47f-4561-9abd-04871a8d98c6</subsheetid>
+    <narrative>Unselect all selected rows</narrative>
+    <displayx>-120</displayx>
+    <displayy>-180</displayy>
+    <displaywidth>150</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+  </stage>
+  <stage stageid="c272d79b-d836-40c9-b653-5da78309fa3c" name="Start" type="Start">
+    <subsheetid>01cea745-f47f-4561-9abd-04871a8d98c6</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>-120</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <inputs>
+      <input type="text" name="Window Title" narrative="Title of current SAP window" stage="Window Title" />
+      <input type="text" name="Table Name" narrative="SAP table ID" stage="Table Name" />
+      <input type="number" name="Session ID" narrative="Current session ID" stage="Session ID" />
+      <input type="number" name="Connection ID" narrative="Current SAP connection ID" stage="Connection ID" />
+    </inputs>
+    <onsuccess>410d6b9b-12a2-4b92-b579-ce7bc152a812</onsuccess>
+  </stage>
+  <stage stageid="15824463-79b5-4f23-a8be-0ce2d836c9dd" name="End" type="End">
+    <subsheetid>01cea745-f47f-4561-9abd-04871a8d98c6</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>60</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+  </stage>
+  <stage stageid="613d9e26-e096-4f15-9a2c-776607133a80" name="Time Out - S" type="WaitEnd">
+    <subsheetid>01cea745-f47f-4561-9abd-04871a8d98c6</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>45</displayx>
+    <displayy>15</displayy>
+    <displaywidth>30</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>15824463-79b5-4f23-a8be-0ce2d836c9dd</onsuccess>
+    <groupid>9965256a-d4f2-440d-8309-af4da7cd96ce</groupid>
+  </stage>
+  <stage stageid="c4140e28-e5d9-47e5-b382-3139eee3bc3c" name="S" type="WaitStart">
+    <subsheetid>01cea745-f47f-4561-9abd-04871a8d98c6</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>-15</displayx>
+    <displayy>15</displayy>
+    <displaywidth>30</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <groupid>9965256a-d4f2-440d-8309-af4da7cd96ce</groupid>
+    <choices />
+    <timeout>[S]</timeout>
+  </stage>
+  <stage stageid="38e6ff80-22f5-40f0-aa95-ce1ebeb6dd46" name="SE - Timeout" type="Exception">
+    <subsheetid>01cea745-f47f-4561-9abd-04871a8d98c6</subsheetid>
+    <narrative>
+    </narrative>
+    <displayx>135</displayx>
+    <displayy>-75</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <exception type="System Exception" detail="&quot;Window not found&quot;" />
+  </stage>
+  <stage stageid="dfb2c67e-6333-4e46-b29a-1eb390fcbea4" name="Time Out - XL" type="WaitEnd">
+    <subsheetid>01cea745-f47f-4561-9abd-04871a8d98c6</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>60</displayx>
+    <displayy>-75</displayy>
+    <displaywidth>30</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>38e6ff80-22f5-40f0-aa95-ce1ebeb6dd46</onsuccess>
+    <groupid>a9f57d89-6215-4e16-a6f7-39e6fdd4b419</groupid>
+  </stage>
+  <stage stageid="410d6b9b-12a2-4b92-b579-ce7bc152a812" name="XL" type="WaitStart">
+    <subsheetid>01cea745-f47f-4561-9abd-04871a8d98c6</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>-30</displayx>
+    <displayy>-75</displayy>
+    <displaywidth>30</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <groupid>a9f57d89-6215-4e16-a6f7-39e6fdd4b419</groupid>
+    <choices>
+      <choice reply="True">
+        <name>Window - Dynamic Check Exists</name>
+        <distance>45</distance>
+        <ontrue>3727919f-ec04-45b9-90a3-f09bb28f804d</ontrue>
+        <element id="e950628b-77a2-4515-ac75-09cdb7229cea">
+          <elementparameter>
+            <name>WindowText</name>
+            <expression>[Window Title]</expression>
+            <datatype>text</datatype>
+            <comparisontype>Wildcard</comparisontype>
+          </elementparameter>
+        </element>
+        <condition>
+          <id>CheckExists</id>
+        </condition>
+        <comparetype>Equal</comparetype>
+      </choice>
+    </choices>
+    <timeout>[XL]</timeout>
+  </stage>
+  <stage stageid="3727919f-ec04-45b9-90a3-f09bb28f804d" name="Unselect Rows" type="Code">
+    <subsheetid>01cea745-f47f-4561-9abd-04871a8d98c6</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>-30</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <inputs>
+      <input type="text" name="TableName" expr="[Table Name]" />
+      <input type="number" name="Session ID" expr="[Session ID]" />
+      <input type="number" name="Connection ID" expr="[Connection ID]" />
+    </inputs>
+    <onsuccess>c4140e28-e5d9-47e5-b382-3139eee3bc3c</onsuccess>
+    <code><![CDATA[Dim session
+
+session = GetObject("SAPGUI").GetScriptingEngine.Children(cint(Connection_ID)).Children(cint(Session_ID))
+session.findById(TableName).selectedRows = ""]]></code>
+  </stage>
+  <stage stageid="0628fa81-5d47-4550-98d8-905335bbb543" name="Window Title" type="Data">
+    <subsheetid>01cea745-f47f-4561-9abd-04871a8d98c6</subsheetid>
+    <narrative>
+    </narrative>
+    <displayx>-120</displayx>
+    <displayy>-90</displayy>
+    <displaywidth>90</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="ce0c366c-57ee-4e3e-a3f2-852a7d00d968" name="Table Name" type="Data">
+    <subsheetid>01cea745-f47f-4561-9abd-04871a8d98c6</subsheetid>
+    <narrative>
+    </narrative>
+    <displayx>-120</displayx>
+    <displayy>-45</displayy>
+    <displaywidth>90</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="84d3e97e-e35c-426b-8859-48b0837b9ee1" name="Input" type="Block">
+    <subsheetid>01cea745-f47f-4561-9abd-04871a8d98c6</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>-180</displayx>
+    <displayy>-120</displayy>
+    <displaywidth>120</displaywidth>
+    <displayheight>195</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="7FB2E5" />
+  </stage>
+  <stage stageid="b160fa9e-9eef-481a-aece-61499194541b" name="Session ID" type="Data">
+    <subsheetid>01cea745-f47f-4561-9abd-04871a8d98c6</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>-120</displayx>
+    <displayy>0</displayy>
+    <displaywidth>90</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>number</datatype>
+    <initialvalue>0</initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="2e1f6dd1-1580-440f-89f5-f567519db1c5" name="Connection ID" type="Data">
+    <subsheetid>01cea745-f47f-4561-9abd-04871a8d98c6</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>-120</displayx>
+    <displayy>45</displayy>
+    <displaywidth>90</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>number</datatype>
+    <initialvalue>0</initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="564f9aa9-dc99-404e-acdc-9a62f96cfe57" name="Unselect Row" type="SubSheetInfo">
+    <subsheetid>1fc8af64-04f0-44ba-b26e-6728406be434</subsheetid>
+    <narrative>Unselect row by given record index</narrative>
+    <displayx>-120</displayx>
+    <displayy>-180</displayy>
+    <displaywidth>150</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+  </stage>
+  <stage stageid="8c83ad23-e2d2-4e90-a4c7-357188faae67" name="Start" type="Start">
+    <subsheetid>1fc8af64-04f0-44ba-b26e-6728406be434</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>-120</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <inputs>
+      <input type="text" name="Window Title" narrative="Title of current SAP window" stage="Window Title" />
+      <input type="text" name="Table Name" narrative="SAP table ID" stage="Table Name" />
+      <input type="number" name="Record Index" narrative="Index of record to be selected" stage="Record Index" />
+      <input type="number" name="Session ID" narrative="Current session ID" stage="Session ID" />
+      <input type="number" name="Connection ID" narrative="Current SAP connection ID" stage="Connection ID" />
+    </inputs>
+    <onsuccess>ed2180ac-4f42-4230-909d-0f214ba2b7aa</onsuccess>
+  </stage>
+  <stage stageid="c21e4010-22c4-4b91-93ed-47375dbe9adf" name="End" type="End">
+    <subsheetid>1fc8af64-04f0-44ba-b26e-6728406be434</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>60</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+  </stage>
+  <stage stageid="aa5f314b-b809-424a-9ed4-1196b529c733" name="Time Out - S" type="WaitEnd">
+    <subsheetid>1fc8af64-04f0-44ba-b26e-6728406be434</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>45</displayx>
+    <displayy>15</displayy>
+    <displaywidth>30</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>c21e4010-22c4-4b91-93ed-47375dbe9adf</onsuccess>
+    <groupid>994c4a4d-73bf-4114-94c2-d451214dce24</groupid>
+  </stage>
+  <stage stageid="7eed19cc-66fc-402b-aa26-4389288078ff" name="S" type="WaitStart">
+    <subsheetid>1fc8af64-04f0-44ba-b26e-6728406be434</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>-15</displayx>
+    <displayy>15</displayy>
+    <displaywidth>30</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <groupid>994c4a4d-73bf-4114-94c2-d451214dce24</groupid>
+    <choices />
+    <timeout>[S]</timeout>
+  </stage>
+  <stage stageid="ba3f0012-118a-4f3d-ba42-81bc56a3ee95" name="SE - Timeout" type="Exception">
+    <subsheetid>1fc8af64-04f0-44ba-b26e-6728406be434</subsheetid>
+    <narrative>
+    </narrative>
+    <displayx>135</displayx>
+    <displayy>-75</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <exception type="System Exception" detail="&quot;Window not found&quot;" />
+  </stage>
+  <stage stageid="96289553-2c48-41dd-bc1a-d5ad8bb4725a" name="Time Out - XL" type="WaitEnd">
+    <subsheetid>1fc8af64-04f0-44ba-b26e-6728406be434</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>60</displayx>
+    <displayy>-75</displayy>
+    <displaywidth>30</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <onsuccess>ba3f0012-118a-4f3d-ba42-81bc56a3ee95</onsuccess>
+    <groupid>e68ed208-c9e1-4b55-8974-89b458bf0572</groupid>
+  </stage>
+  <stage stageid="ed2180ac-4f42-4230-909d-0f214ba2b7aa" name="XL" type="WaitStart">
+    <subsheetid>1fc8af64-04f0-44ba-b26e-6728406be434</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>-30</displayx>
+    <displayy>-75</displayy>
+    <displaywidth>30</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <groupid>e68ed208-c9e1-4b55-8974-89b458bf0572</groupid>
+    <choices>
+      <choice reply="True">
+        <name>Window - Dynamic Check Exists</name>
+        <distance>45</distance>
+        <ontrue>1e3fd570-9645-4241-9ef3-930f560ae630</ontrue>
+        <element id="e950628b-77a2-4515-ac75-09cdb7229cea">
+          <elementparameter>
+            <name>WindowText</name>
+            <expression>[Window Title]</expression>
+            <datatype>text</datatype>
+            <comparisontype>Wildcard</comparisontype>
+          </elementparameter>
+        </element>
+        <condition>
+          <id>CheckExists</id>
+        </condition>
+        <comparetype>Equal</comparetype>
+      </choice>
+    </choices>
+    <timeout>[XL]</timeout>
+  </stage>
+  <stage stageid="1e3fd570-9645-4241-9ef3-930f560ae630" name="Unselect Row" type="Code">
+    <subsheetid>1fc8af64-04f0-44ba-b26e-6728406be434</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>15</displayx>
+    <displayy>-30</displayy>
+    <displaywidth>60</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <inputs>
+      <input type="number" name="RecordIndex" expr="[Record Index]" />
+      <input type="text" name="TableName" expr="[Table Name]" />
+      <input type="number" name="Session ID" expr="[Session ID]" />
+      <input type="number" name="Connection ID" expr="[Connection ID]" />
+    </inputs>
+    <onsuccess>7eed19cc-66fc-402b-aa26-4389288078ff</onsuccess>
+    <code><![CDATA[Dim session
+
+session = GetObject("SAPGUI").GetScriptingEngine.Children(cint(Connection_ID)).Children(cint(Session_ID))
+session.findById(TableName).getAbsoluteRow(RecordIndex).selected = false]]></code>
+  </stage>
+  <stage stageid="88f94331-71e8-4819-b71f-423e0d5b6022" name="Window Title" type="Data">
+    <subsheetid>1fc8af64-04f0-44ba-b26e-6728406be434</subsheetid>
+    <narrative>
+    </narrative>
+    <displayx>-120</displayx>
+    <displayy>-90</displayy>
+    <displaywidth>90</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="73168806-1b1e-4a40-9814-cad97e181c22" name="Table Name" type="Data">
+    <subsheetid>1fc8af64-04f0-44ba-b26e-6728406be434</subsheetid>
+    <narrative>
+    </narrative>
+    <displayx>-120</displayx>
+    <displayy>-45</displayy>
+    <displaywidth>90</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="21dc12f1-b8f2-4b60-a8ea-97d809489f27" name="Record Index" type="Data">
+    <subsheetid>1fc8af64-04f0-44ba-b26e-6728406be434</subsheetid>
+    <narrative>
+    </narrative>
+    <displayx>-120</displayx>
+    <displayy>0</displayy>
+    <displaywidth>90</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>number</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="d6142401-1dc7-47f5-89ed-2d48d9117b75" name="Input" type="Block">
+    <subsheetid>1fc8af64-04f0-44ba-b26e-6728406be434</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>-180</displayx>
+    <displayy>-120</displayy>
+    <displaywidth>120</displaywidth>
+    <displayheight>240</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="7FB2E5" />
+  </stage>
+  <stage stageid="cec91300-125f-4977-83c5-ebfca2f59ac5" name="Session ID" type="Data">
+    <subsheetid>1fc8af64-04f0-44ba-b26e-6728406be434</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>-120</displayx>
+    <displayy>45</displayy>
+    <displaywidth>90</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>number</datatype>
+    <initialvalue>0</initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="084309ac-41a6-450a-923e-712bba19fc4e" name="Connection ID" type="Data">
+    <subsheetid>1fc8af64-04f0-44ba-b26e-6728406be434</subsheetid>
+    <loginhibit />
+    <narrative>
+    </narrative>
+    <displayx>-120</displayx>
+    <displayy>90</displayy>
+    <displaywidth>90</displaywidth>
+    <displayheight>30</displayheight>
+    <font family="Segoe UI" size="10" style="Regular" color="000000" />
+    <datatype>number</datatype>
+    <initialvalue>0</initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+</process>

@@ -1,0 +1,42 @@
+html {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 100%;
+}
+
+h1 {
+	margin-top: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+.progress {
+  position: fixed;
+  top: 50%;
+  width: 50%;
+  left: 25%;
+}
+#fileDisplayArea{
+  width: 99%;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid grey;
+}
+#bprelease{
+
+}
+#objectxml{
+
+}
+.choosemenu{
+
+  
+}

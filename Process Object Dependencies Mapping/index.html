@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>File API</title>
+
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="w3.css">
+	<script type="text/javascript" src="excellentexport.min.js"></script>
+</head>
+
+<body>
+	<div id="page-wrapper">
+
+		<h1>Generate Process/Business Objects Dependencies Mapping</h1>
+		<div id="bprelease" class="choosemenu">
+
+			Select a .bprelease file:
+			<input type="file" id="fileInput">
+			<a download="mapping.xls" href="#" onclick="return ExcellentExport.excel(this, 'fileDisplayArea', 'Mapping');">Export to Excel</a>
+
+		</div>
+
+		<div id="objectxml" class="choosemenu">
+
+			Select a Business Object .xml file:
+			<input type="file" id="fileInput2">
+			<a download="mapping.xls" href="#" onclick="return ExcellentExport.excel(this, 'fileDisplayArea', 'Mapping');">Export to Excel</a>
+
+
+		</div>
+
+		<div id="exceptions" class="choosemenu">
+
+			Select a file to export Exception List:
+			<input type="file" id="fileInput3">
+			<a download="mapping.xls" href="#" onclick="return ExcellentExport.excel(this, 'fileDisplayArea', 'Mapping');">Export to Excel</a>
+
+		</div>
+		<table id="fileDisplayArea"></table>
+		<script src="main.js"></script>
+</body>
+
+</html>
