@@ -1,0 +1,1 @@
+"C:\Program Files\Blue Prism Limited\Blue Prism Automate\Automate.exe" /resourcepc /public /dbconname "BluePrism-Honda-DEV"

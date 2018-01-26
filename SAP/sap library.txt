@@ -1,0 +1,3 @@
+C:\Program Files (x86)\SAP\FrontEnd\SAPgui\SAPfewse.ocx 
+
+SAP GUI Scripting API
